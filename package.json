@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "watch": "webpack-dev-server"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.30",
+    "prettier": "^1.7.0",
+    "ts-loader": "^2.3.7",
+    "typescript": "^2.5.2",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  }
+}
