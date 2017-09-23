@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "watch": "webpack-dev-server"
+    "watch": "webpack-dev-server --hot"
   },
   "devDependencies": {
     "@types/node": "^8.0.30",
