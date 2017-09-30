@@ -4,6 +4,7 @@
   },
   "devDependencies": {
     "@types/node": "^8.0.30",
+    "eslint": "^4.8.0",
     "prettier": "^1.7.0",
     "ts-loader": "^2.3.7",
     "typescript": "^2.5.2",
@@ -13,6 +14,7 @@
   "dependencies": {
     "@cycle/dom": "^18.3.0",
     "@cycle/run": "^3.2.0",
+    "snabbdom-jsx": "^0.4.2",
     "xstream": "^11.0.0"
   }
 }
