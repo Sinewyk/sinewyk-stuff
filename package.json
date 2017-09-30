@@ -1,5 +1,8 @@
 {
+  "name": "sinewyk-stuff",
+  "version": "0.1.0",
   "scripts": {
+    "build": "webpack -p",
     "watch": "webpack-dev-server --hot"
   },
   "devDependencies": {
