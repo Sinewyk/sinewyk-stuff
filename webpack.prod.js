@@ -3,6 +3,7 @@ const merge = require('webpack-merge');
 const commonConf = require('./webpack.common');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const StatsPlugin = require('stats-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = merge(commonConf, {
   devtool: 'source-map',
@@ -20,5 +21,6 @@ module.exports = merge(commonConf, {
       },
     }),
     new StatsPlugin('stats.json'),
+    new CompressionPlugin(),
   ],
 });
