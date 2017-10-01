@@ -2,7 +2,9 @@
 <html>
 
 <head>
-  <title>Sinewyk's Stuff</title>
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
   <style>
     body {
       width: 35em;
@@ -10,7 +12,6 @@
       font-family: Tahoma, Verdana, Arial, sans-serif;
     }
   </style>
-  <script src="/bundle.js" async></script>
 </head>
 
 <body>
