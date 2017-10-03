@@ -1,0 +1,5 @@
+@import 'normalize.css';
+
+:global body {
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+}
