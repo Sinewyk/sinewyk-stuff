@@ -1,6 +1,7 @@
 const merge = require('webpack-merge');
 const path = require('path');
 const commonConf = require('./webpack.common');
+const webpack = require('webpack');
 
 module.exports = merge(commonConf, {
   devtool: 'eval',
@@ -39,6 +40,14 @@ module.exports = merge(commonConf, {
       },
     ],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('development'),
+      },
+      __LAST_BUILD_TIME__: Date.now(),
+    }),
+  ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     noInfo: true,
