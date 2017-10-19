@@ -33,7 +33,9 @@
   },
   "dependencies": {
     "@cycle/dom": "^18.3.0",
+    "@cycle/most-run": "^7.2.0",
     "@cycle/run": "^3.3.0",
+    "most": "^1.7.2",
     "normalize.css": "^7.0.0",
     "snabbdom-jsx": "^0.4.2",
     "xstream": "^11.0.0"
