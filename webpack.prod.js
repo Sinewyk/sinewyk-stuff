@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const commonConf = require('./webpack.common');
-// const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const BabelMinifyWebpackPlugin = require('babel-minify-webpack-plugin');
 const StatsPlugin = require('stats-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
@@ -55,10 +54,6 @@ module.exports = merge(commonConf, {
   },
   plugins: [
     cssExtractor,
-    // Does not natively support es6 stuff, so, it's really breaking my balls
-    /* new UglifyJSPlugin({
-      sourceMap: true
-    }), */
     new BabelMinifyWebpackPlugin(
       {
         removeConsole: true,
