@@ -20,6 +20,11 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.md$/,
+        use: ['html-loader', 'markdown-loader'],
+        exclude: /node_modules/,
+      },
     ],
   },
   resolve: {
