@@ -51,5 +51,6 @@ module.exports = merge(commonConf, {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     noInfo: true,
+    port: 8000,
   },
 });
