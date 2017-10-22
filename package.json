@@ -38,6 +38,7 @@
     "@cycle/dom": "^19.0.0",
     "@cycle/history": "^6.5.0",
     "@cycle/run": "^3.3.0",
+    "cyclejs-utils": "^3.0.2",
     "normalize.css": "^7.0.0",
     "snabbdom-jsx": "^0.4.2",
     "xstream": "^11.0.0"
