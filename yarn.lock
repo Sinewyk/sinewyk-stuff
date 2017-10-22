@@ -1782,7 +1782,7 @@ express@^4.13.3, express@^4.15.2:
     utils-merge "1.0.1"
     vary "~1.1.2"
 
-extend@~3.0.0:
+extend@^3.0.0, extend@~3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.1.tgz#a755ea7bc1adfcc5a31ce7e762dbaadc5e636444"
 
@@ -4157,11 +4157,11 @@ slice-ansi@1.0.0:
   dependencies:
     is-fullwidth-code-point "^2.0.0"
 
-snabbdom-jsx@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/snabbdom-jsx/-/snabbdom-jsx-0.4.2.tgz#e580682d60b4cc1da9898c6a0bacfcd062a0cffc"
+snabbdom-pragma@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/snabbdom-pragma/-/snabbdom-pragma-2.5.0.tgz#00ba5693a51390608d4ccd70db0029ef4f5c77b0"
   dependencies:
-    snabbdom "^0.7.0"
+    extend "^3.0.0"
 
 snabbdom-selector@1.2.1:
   version "1.2.1"
@@ -4169,7 +4169,7 @@ snabbdom-selector@1.2.1:
   dependencies:
     cssauron "^1.4.0"
 
-snabbdom@0.7.0, snabbdom@^0.7.0:
+snabbdom@0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/snabbdom/-/snabbdom-0.7.0.tgz#c09e2baa0f8d43d306a3aa7502b62fdde2b4154e"
 

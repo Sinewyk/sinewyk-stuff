@@ -1,5 +1,5 @@
 import { Stream } from 'xstream';
-import { html } from 'snabbdom-jsx';
+import { createElement } from 'snabbdom-pragma';
 
 import styles from './Footer.css';
 
