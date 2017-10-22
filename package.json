@@ -9,6 +9,7 @@
     "watch": "webpack-dev-server --hot --config=./webpack.dev"
   },
   "devDependencies": {
+    "@types/history": "^4.6.1",
     "@types/node": "^8.0.30",
     "autoprefixer": "^7.1.4",
     "babel-minify-webpack-plugin": "^0.2.0",
@@ -35,6 +36,7 @@
   },
   "dependencies": {
     "@cycle/dom": "^19.0.0",
+    "@cycle/history": "^6.5.0",
     "@cycle/run": "^3.3.0",
     "normalize.css": "^7.0.0",
     "snabbdom-jsx": "^0.4.2",

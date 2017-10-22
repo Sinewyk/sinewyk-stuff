@@ -1,14 +1,14 @@
-import xs from 'xstream';
+import { Stream } from 'xstream';
 import { html } from 'snabbdom-jsx';
 
 import styles from './Footer.css';
 
-export default function Footer() {
+export default function Footer(config$: Stream<any>) {
   return {
-    DOM: xs.of(
+    DOM: config$.map(config => (
       <footer className={styles.root}>
-        Latest release: {new Date(__LAST_BUILD_TIME__).toLocaleDateString()}
-      </footer>,
-    ),
+        Latest release: {new Date(config.last_build_time).toLocaleDateString()}
+      </footer>
+    )),
   };
 }

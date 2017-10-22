@@ -1,15 +1,22 @@
-import xs from 'xstream';
-import { div } from '@cycle/dom';
+import xs, { Stream } from 'xstream';
+import { div, VNode } from '@cycle/dom';
 import Site from '../components/Site';
 import Footer from '../components/Footer';
+import { Sources, RootSinks } from './interfaces';
 
 import '../styles/body.css';
 
-export default function app() {
+function view(sources: Sources): Stream<VNode> {
   const site = Site();
-  const footer = Footer();
+  const footer = Footer(sources.Config);
+
+  return xs.combine(site.DOM, footer.DOM).map(x => div(x));
+}
+
+export default function app(sources: Sources): RootSinks {
   const sinks = {
-    DOM: xs.combine(site.DOM, footer.DOM).map(x => div(x)),
+    DOM: view(sources),
+    History: xs.never(),
   };
   return sinks;
 }
