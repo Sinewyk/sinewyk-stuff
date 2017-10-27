@@ -2,15 +2,14 @@
 # yarn lockfile v1
 
 
-"@cycle/dom@^19.0.0":
-  version "19.3.0"
-  resolved "https://registry.yarnpkg.com/@cycle/dom/-/dom-19.3.0.tgz#cb2fc79af53762e5cc24c7e5be9585b691cae943"
+"@cycle/dom@*19.2.0":
+  version "19.2.0"
+  resolved "https://registry.yarnpkg.com/@cycle/dom/-/dom-19.2.0.tgz#815393f4a58b26e6a470f9b407d22585dd30f597"
   dependencies:
-    "@cycle/run" "3.4"
+    "@cycle/run" "*"
     es6-map "^0.1.4"
     snabbdom "0.7.0"
-    snabbdom-selector "2.0.1"
-    xstream "11.x"
+    snabbdom-selector "1.2.1"
 
 "@cycle/history@^6.5.0":
   version "6.8.0"
@@ -1192,9 +1191,9 @@ css-what@2.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/css-what/-/css-what-2.1.0.tgz#9467d032c38cfaefb9f2d79501253062f87fa1bd"
 
-cssauron2@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/cssauron2/-/cssauron2-2.0.1.tgz#f279cd3fc6aaf1bbc2477bea6ce92302a2ec2fac"
+cssauron@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/cssauron/-/cssauron-1.4.0.tgz#a6602dff7e04a8306dc0db9a551e92e8b5662ad8"
   dependencies:
     through X.X.X
 
@@ -4183,11 +4182,11 @@ snabbdom-pragma@^2.5.0:
   dependencies:
     extend "^3.0.0"
 
-snabbdom-selector@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/snabbdom-selector/-/snabbdom-selector-2.0.1.tgz#50704b4802662198e427f0200dd461eb201d52c5"
+snabbdom-selector@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/snabbdom-selector/-/snabbdom-selector-1.2.1.tgz#e2fd0470f4d510a06eb15f4b9ca49e258fd7216e"
   dependencies:
-    cssauron2 "^2.0.1"
+    cssauron "^1.4.0"
 
 snabbdom@0.7.0:
   version "0.7.0"
