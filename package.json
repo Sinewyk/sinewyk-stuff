@@ -11,6 +11,7 @@
   "devDependencies": {
     "@types/history": "^4.6.1",
     "@types/node": "^8.0.30",
+    "@types/path-to-regexp": "^1.7.0",
     "autoprefixer": "^7.1.4",
     "babel-minify-webpack-plugin": "^0.2.0",
     "clean-webpack-plugin": "^0.1.17",
@@ -40,6 +41,7 @@
     "@cycle/run": "^3.3.0",
     "cyclejs-utils": "^3.0.2",
     "normalize.css": "^7.0.0",
+    "path-to-regexp": "^2.1.0",
     "snabbdom-pragma": "^2.5.0",
     "xstream": "^11.0.0"
   }

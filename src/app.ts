@@ -20,9 +20,9 @@ export default function app(sources: Sources): RootSinks {
 
   const pageSinks$ = history$.map((location: Location) => {
     const { pathname } = location;
+
     console.log(pathname);
 
-    // fake routing, it's the homepage
     return {
       DOM: xs.of(
         div(
