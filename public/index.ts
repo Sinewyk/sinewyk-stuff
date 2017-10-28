@@ -4,9 +4,6 @@ import { makeDOMDriver } from '@cycle/dom';
 import { captureClicks, makeHistoryDriver } from '@cycle/history';
 import app from '../src/app';
 
-import posts from '../posts';
-console.log(posts);
-
 const drivers = {
   DOM: makeDOMDriver('#root'),
   History: captureClicks(makeHistoryDriver()),

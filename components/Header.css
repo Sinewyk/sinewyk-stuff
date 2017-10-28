@@ -1,0 +1,10 @@
+.header {
+  composes: centered from '../styles/alignment.css';
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.sub {
+  composes: centered from '../styles/alignment.css';
+  composes: reading from '../styles/typography.css';
+}

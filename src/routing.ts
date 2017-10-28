@@ -1,4 +1,6 @@
 import * as pathToRegexp from 'path-to-regexp';
+import xs from 'xstream';
+import { Sources, Component, Route } from '../src/interfaces';
 
 /**
  * Stole most of this from react-router matchPath
@@ -46,7 +48,7 @@ interface MatchPathOptions {
   sensitive?: boolean;
 }
 
-export const matchPath = (
+const matchPath = (
   pathname: string,
   options: MatchPathOptions | string = {},
 ) => {
@@ -56,7 +58,7 @@ export const matchPath = (
 
   const {
     path = '/',
-    exact = false,
+    exact = true,
     strict = false,
     sensitive = false,
   } = options;
@@ -84,3 +86,20 @@ export const matchPath = (
     }, {}),
   };
 };
+
+export function route(
+  pathname: string,
+  routes: Route[],
+  defaultComponent: Component,
+): Component {
+  return routes.reduce((_, value) => {
+    const didMatch = matchPath(pathname, value.path);
+    return didMatch
+      ? (sources: Sources) =>
+          value.value({
+            Params: xs.of(didMatch.params),
+            ...sources,
+          })
+      : defaultComponent;
+  }, defaultComponent);
+}
