@@ -1,7 +1,6 @@
 {
   "name": "sinewyk-stuff",
   "version": "0.1.0",
-  "license": "MIT",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config=./webpack.prod",
     "analyse": "yarn build && webpack-bundle-analyzer dist/stats.json",
