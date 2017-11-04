@@ -15,7 +15,7 @@ const routes: Route[] = [
 
 function Site(sources: Sources) {
   const footer = Footer(sources.Config);
-  const header = Header();
+  const header = Header(sources);
 
   const pageSinks$ = sources.History.map((location: Location) => {
     const { pathname } = location;

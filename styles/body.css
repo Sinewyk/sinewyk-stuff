@@ -1,5 +1,10 @@
 @import 'normalize.css';
 
+:global html {
+  font-size: 18px;
+}
+
 :global body {
   font-family: Tahoma, Verdana, Arial, sans-serif;
+  background-color: white;
 }

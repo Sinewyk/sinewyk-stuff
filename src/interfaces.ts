@@ -3,10 +3,13 @@ import { VNode, DOMSource } from '@cycle/dom';
 import { Location } from 'history';
 import { HistoryInput } from '@cycle/history';
 
+export type HistoryStream = Stream<Location>;
+export type AnyStream = Stream<any>;
+
 export interface Sources {
   DOM: DOMSource;
-  History: Stream<Location>;
-  Config: Stream<any>;
+  History: HistoryStream;
+  Config: AnyStream;
 }
 
 export interface RootSinks {
@@ -15,7 +18,7 @@ export interface RootSinks {
 }
 
 export type PageSources = Sources & {
-  Params: Stream<any>;
+  Params: AnyStream;
 };
 
 export type Sinks = Partial<RootSinks>;

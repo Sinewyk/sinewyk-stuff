@@ -1,5 +1,13 @@
 .root {
-  position: fixed;
-  bottom: 0;
-  right: 0;
+  composes: centered from '../styles/alignment.css';
+  composes: bg-grey from '../styles/colors.css';
+  composes: _grey from '../styles/colors.css';
+  margin-top: 60px;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  padding: 30px 0;
+}
+
+.link {
+  composes: _grey from '../styles/colors.css';
 }

@@ -1,6 +1,11 @@
 .header {
   composes: centered from '../styles/alignment.css';
-  font-size: 28px;
+  background: linear-gradient(45deg, rgb(22, 52, 87), rgb(17, 105, 54));
+  height: 100px;
+}
+
+.name {
+  font-size: 1.3rem;
   font-weight: bold;
 }
 

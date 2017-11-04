@@ -1,19 +1,28 @@
-import xs from 'xstream';
 import { createElement } from 'snabbdom-pragma';
+import { HistoryStream, Sources } from '../src/interfaces';
 
 import styles from './Header.css';
 
-export default function Header() {
+export default function Header(sources: Sources) {
+  const history$: HistoryStream = sources.History;
   return {
-    DOM: xs.of(
-      <div>
-        <header className={styles.header}>Sinewyk's Stuff</header>
-        <div className={styles.sub}>
-          <p>Welcome to my stuff</p>
-          <p>In the future there will be a blog and stuff</p>
-          <p>For now ... just chill</p>
-        </div>
-      </div>,
+    DOM: history$.map(
+      ({ pathname }) =>
+        pathname === '/' ? (
+          <div>
+            <header className={styles.header} />
+            <div className={styles.sub}>
+              <p className={styles.name}>Serge 'Sinewyk' Havas</p>
+              <p>Welcome to my stuff </p>
+              <p>
+                In the future posts & random stuff will be here, for now ...
+                just chill
+              </p>
+            </div>
+          </div>
+        ) : (
+          <header className={styles.header} />
+        ),
     ),
   };
 }

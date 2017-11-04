@@ -7,7 +7,18 @@ export default function Footer(config$: Stream<any>) {
   return {
     DOM: config$.map(config => (
       <footer className={styles.root}>
-        Latest release: {new Date(config.last_build_time).toLocaleDateString()}
+        <p>
+          <a
+            className={styles.link}
+            href="https://github.com/Sinewyk/sinewyk-stuff"
+          >
+            Source code
+          </a>
+        </p>
+        <p>
+          Latest release:{' '}
+          {new Date(config.last_build_time).toLocaleDateString()}
+        </p>
       </footer>
     )),
   };
