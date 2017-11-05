@@ -93,6 +93,9 @@ export function route(
   defaultComponent: Component,
 ): Component {
   return routes.reduce((_, value) => {
+    if (_ !== defaultComponent) {
+      return _;
+    }
     const didMatch = matchPath(pathname, value.path);
     return didMatch
       ? (sources: Sources) =>

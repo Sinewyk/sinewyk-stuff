@@ -11,5 +11,4 @@
 
 .sub {
   composes: centered from '../styles/alignment.css';
-  composes: reading from '../styles/typography.css';
 }

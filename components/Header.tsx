@@ -13,11 +13,6 @@ export default function Header(sources: Sources) {
             <header className={styles.header} />
             <div className={styles.sub}>
               <p className={styles.name}>Serge 'Sinewyk' Havas</p>
-              <p>Welcome to my stuff </p>
-              <p>
-                In the future posts & random stuff will be here, for now ...
-                just chill
-              </p>
             </div>
           </div>
         ) : (
