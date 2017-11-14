@@ -16,9 +16,8 @@ export default function Footer(config$: Stream<any>) {
             Source code
           </a>
         </p>
-        <p>
-          Latest release:{' '}
-          {new Date(config.last_build_time).toLocaleDateString()}
+        <p title={config.last_build_time}>
+          Latest release: {new Date(config.last_build_time).toUTCString()}
         </p>
       </footer>
     )),
