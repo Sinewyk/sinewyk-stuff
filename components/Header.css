@@ -4,11 +4,12 @@
   height: 100px;
 }
 
+.sub {
+  composes: container from '../styles/reusable.css';
+  composes: centered from '../styles/alignment.css';
+}
+
 .name {
   font-size: 1.3rem;
   font-weight: bold;
-}
-
-.sub {
-  composes: centered from '../styles/alignment.css';
 }
