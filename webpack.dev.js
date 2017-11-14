@@ -47,10 +47,15 @@ module.exports = merge(commonConf, {
       },
       __LAST_BUILD_TIME__: Date.now(),
     }),
+    new webpack.NamedModulesPlugin(),
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     noInfo: true,
     port: 8000,
+    overlay: {
+      warnings: true,
+      errors: true,
+    },
   },
 });
