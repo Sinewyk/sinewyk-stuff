@@ -10,6 +10,7 @@ export default function Footer(config$: Stream<any>) {
         <p>
           <a
             className={styles.link}
+            target="_blank"
             href="https://github.com/Sinewyk/sinewyk-stuff"
           >
             Source code
