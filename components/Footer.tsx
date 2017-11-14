@@ -7,18 +7,20 @@ export default function Footer(config$: Stream<any>) {
   return {
     DOM: config$.map(config => (
       <footer className={styles.root}>
-        <p>
-          <a
-            className={styles.link}
-            target="_blank"
-            href="https://github.com/Sinewyk/sinewyk-stuff"
-          >
-            Source code
-          </a>
-        </p>
-        <p title={config.last_build_time}>
-          Latest release: {new Date(config.last_build_time).toUTCString()}
-        </p>
+        <div className={styles.inner}>
+          <p>
+            <a
+              className={styles.link}
+              target="_blank"
+              href="https://github.com/Sinewyk/sinewyk-stuff"
+            >
+              Source code
+            </a>
+          </p>
+          <p title={config.last_build_time}>
+            Latest release: {new Date(config.last_build_time).toUTCString()}
+          </p>
+        </div>
       </footer>
     )),
   };
