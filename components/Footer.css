@@ -2,10 +2,12 @@
   composes: centered from '../styles/alignment.css';
   composes: bg-grey from '../styles/colors.css';
   composes: _grey from '../styles/colors.css';
+  composes: container from '../styles/reusable.css';
   margin-top: 60px;
   border-top: 1px solid #dddddd;
   border-bottom: 1px solid #dddddd;
-  padding: 30px 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .link {
