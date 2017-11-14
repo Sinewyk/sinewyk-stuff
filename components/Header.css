@@ -5,8 +5,8 @@
 }
 
 .sub {
-  composes: container from '../styles/reusable.css';
   composes: centered from '../styles/alignment.css';
+  composes: container from '../styles/reusable.css';
 }
 
 .name {
