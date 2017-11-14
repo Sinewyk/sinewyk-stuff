@@ -5,6 +5,7 @@
     "build": "cross-env NODE_ENV=production webpack --config=./webpack.prod",
     "analyse": "yarn build && webpack-bundle-analyzer dist/stats.json",
     "analyze": "yarn analyse",
+    "serve": "serve dist --port 8000 --open --single",
     "watch": "webpack-dev-server --hot --config=./webpack.dev"
   },
   "devDependencies": {
@@ -26,6 +27,7 @@
     "markdown-loader": "^2.0.1",
     "postcss-loader": "^2.0.6",
     "prettier": "^1.7.0",
+    "serve": "^6.4.1",
     "stats-webpack-plugin": "^0.6.1",
     "style-loader": "^0.19.0",
     "ts-loader": "^3.0.0",

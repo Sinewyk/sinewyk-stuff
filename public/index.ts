@@ -31,7 +31,10 @@ if (process.env.NODE_ENV === 'production') {
 
   const rerun = rerunner(setup, makeDrivers);
 
-  rerun(app);
+  // bypass some weird bug :o
+  setTimeout(() => {
+    rerun(app);
+  }, 0);
 
   if ((module as any).hot) {
     (module as any).hot.accept('../src/app', () => {
