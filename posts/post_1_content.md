@@ -1,9 +1,25 @@
-# I want to go back to simpler times
+Recently I've read this:
+
+> I want to go back to simpler times
 
 Do not wish for "simpler times".
 
-That's the story of life, evolve or die. Species that couldn't adapt died out, those that adapted survived and finally thrived. There is no "simpler times", there's just the past, and that's history. Move on and adapt.
+Life's story boils down to "__Evolve or die__".
 
-I'm not telling you to die if you can't succeed _alone_, while evolving, humans rapidly became dependent on our social ability. It's hard to be alone. So, ask for help around. Just discard the notion that "asking for help is admitting weakness" ... because it's true.
+Species that couldn't adapt died out, those that adapted survived and finally thrived.
 
-You are admitting that you have a weakness. But you are also admitting that you want to grow stronger, to be better. And that's all I could look for in another human being, and maybe a friend. That you just won't sit still, embrace your life, grow, adapt, and be awesome.
+There is no "simpler times", there's just the past, and that's history. Move on and adapt.
+
+I'm not telling you to die if you can't succeed _alone_.
+
+While evolving, humans rapidly became dependent on their social ability. It's hard to be alone. It's really, really hard (the step 1 of torture 101 is isolation).
+
+So, ask for help around. Just discard the notion that "asking for help is admitting weakness" ... because it's true, so there, no worries about that.
+
+You are admitting that you have a weakness. Yet you are also admitting that you want to grow stronger, to be better.
+
+And that's all I could look for in another human being, and maybe a friend. That you just won't sit still, embrace your life, grow, adapt, and be awesome.
+
+NB: I've read that in the context of functional programming, and it really is hard.
+
+Also, however we settled on those names "nomad, bifunctor" or whatever, I'm pretty sure it's at least why the difficulty level is so damn high.

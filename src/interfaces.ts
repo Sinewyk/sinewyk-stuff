@@ -30,3 +30,11 @@ export interface Route {
   path: string;
   value: any;
 }
+
+export interface Post {
+  title: string;
+  slug: string;
+  created_at: number;
+  updated_at: number;
+  content: string;
+}

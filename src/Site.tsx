@@ -7,11 +7,13 @@ import { extractSinks } from 'cyclejs-utils';
 import { Sources, Route } from '../src/interfaces';
 import { route } from '../src/routing';
 import List_Posts from '../pages/List_Posts';
+import Post from '../components/Post';
 import Home from '../pages/Home';
 
 const routes: Route[] = [
   { path: '/', value: Home },
   { path: '/posts', value: List_Posts },
+  { path: '/posts/:slug', value: Post },
 ];
 
 function Site(sources: Sources) {

@@ -1,0 +1,12 @@
+.title {
+}
+
+.post {
+  composes: reading from '../styles/typography.css';
+}
+
+.post blockquote {
+  background-color: #eeeeee;
+  padding: 0.5rem 1rem;
+  margin: 0;
+}

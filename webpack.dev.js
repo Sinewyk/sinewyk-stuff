@@ -50,11 +50,10 @@ module.exports = merge(commonConf, {
     new webpack.NamedModulesPlugin(),
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: './dist',
     noInfo: true,
     port: 8000,
     overlay: {
-      warnings: true,
       errors: true,
     },
   },
