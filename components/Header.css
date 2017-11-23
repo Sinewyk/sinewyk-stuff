@@ -1,12 +1,10 @@
 .header {
-  composes: centered from '../styles/alignment.css';
   background: linear-gradient(45deg, rgb(22, 52, 87), rgb(17, 105, 54));
   height: 100px;
 }
 
 .sub {
   composes: centered from '../styles/alignment.css';
-  composes: container from '../styles/reusable.css';
 }
 
 .name {

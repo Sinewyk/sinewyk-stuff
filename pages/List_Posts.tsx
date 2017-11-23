@@ -1,6 +1,6 @@
 import { PageSources } from '../src/interfaces';
 import { createElement } from 'snabbdom-pragma';
-import styles from '../styles/reusable.css';
+import { Container } from '../components/Container';
 import typo from '../styles/typography.css';
 import posts from '../posts';
 
@@ -8,9 +8,9 @@ export default function List_Posts(sources: PageSources) {
   const hasPosts = posts.length !== 0;
   return {
     DOM: sources.History.map(location => (
-      <div className={styles.container}>
+      <Container>
         {hasPosts ? (
-          <h2>Posts:</h2>
+          <h2 className="">Posts:</h2>
         ) : (
           <div>
             <h2>No posts yet :'(</h2>
@@ -24,7 +24,7 @@ export default function List_Posts(sources: PageSources) {
             </li>
           ))}
         </ul>
-      </div>
+      </Container>
     )),
   };
 }

@@ -9,10 +9,6 @@
   padding-bottom: 30px;
 }
 
-.inner {
-  composes: container from '../styles/reusable.css';
-}
-
 .link {
   composes: _grey from '../styles/colors.css';
 }

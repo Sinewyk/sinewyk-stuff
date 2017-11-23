@@ -1,5 +1,6 @@
 import { Stream } from 'xstream';
 import { createElement } from 'snabbdom-pragma';
+import { Container } from './Container';
 
 import styles from './Footer.css';
 
@@ -7,7 +8,7 @@ export default function Footer(config$: Stream<any>) {
   return {
     DOM: config$.map(config => (
       <footer className={styles.root}>
-        <div className={styles.inner}>
+        <Container>
           <p>
             <a
               className={styles.link}
@@ -20,7 +21,7 @@ export default function Footer(config$: Stream<any>) {
           <p title={config.last_build_time}>
             Latest release: {new Date(config.last_build_time).toUTCString()}
           </p>
-        </div>
+        </Container>
       </footer>
     )),
   };

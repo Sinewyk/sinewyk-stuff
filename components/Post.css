@@ -1,4 +1,5 @@
 .title {
+  text-align: center;
 }
 
 .post {
@@ -6,7 +7,10 @@
 }
 
 .post blockquote {
-  background-color: #eeeeee;
-  padding: 0.5rem 1rem;
-  margin: 0;
+  font-style: italic;
+  border-left: 3px grey solid;
+  padding-left: 10px;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  margin-left: -10px;
 }
