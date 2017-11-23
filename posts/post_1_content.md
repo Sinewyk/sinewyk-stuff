@@ -18,7 +18,7 @@ So, ask for help around. Just discard the notion that "asking for help is admitt
 
 You are admitting that you have a weakness. Yet you are also admitting that you want to grow stronger, to be better.
 
-And that's all I could look for in another human being, and maybe a friend. That you just won't sit still, embrace your life, grow, adapt, and be awesome.
+And that's all I could look for in another human being, and maybe a friend. That you just won't sit still; embrace your life, grow, adapt, and be awesome.
 
 NB: I've read that in the context of functional programming, and it really is hard.
 
