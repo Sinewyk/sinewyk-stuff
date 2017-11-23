@@ -4,6 +4,11 @@
 
 .post {
   composes: reading from '../styles/typography.css';
+  margin-bottom: 4rem;
+}
+
+.dates {
+  opacity: 0.7;
 }
 
 .post blockquote {

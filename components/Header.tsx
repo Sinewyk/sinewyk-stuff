@@ -1,11 +1,11 @@
 import { createElement } from 'snabbdom-pragma';
-import { HistoryStream, Sources } from '../src/interfaces';
+import { Sources } from '../src/interfaces';
 import { styles as ContainerStyles } from './Container';
 
 import styles from './Header.css';
 
 export default function Header(sources: Sources) {
-  const history$: HistoryStream = sources.History;
+  const history$ = sources.History;
   return {
     DOM: history$.map(
       ({ pathname }) =>
