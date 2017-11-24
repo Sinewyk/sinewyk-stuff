@@ -20,6 +20,8 @@ You are admitting that you have a weakness. Yet you are also admitting that you 
 
 And that's all I could look for in another human being, and maybe a friend. That you just won't sit still; embrace your life, grow, adapt, and be awesome.
 
-NB: I've read that in the context of functional programming, and it really is hard.
+__NB__: I've read that in the context of functional programming, and it really is hard though.
 
-Also, however we settled on those names "nomad, bifunctor" or whatever, I'm pretty sure it's at least why the difficulty level is so damn high.
+Also, "we" (I wasn't born yet) settled on those names "monad, bifunctor" or whatever ... I'm pretty sure those names make it harder to get a handle on this stuff.
+
+Not saying I could have done better.
