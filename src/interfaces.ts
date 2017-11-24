@@ -6,10 +6,20 @@ import { HistoryInput } from '@cycle/history';
 export type HistoryStream = Stream<Location>;
 export type AnyStream = Stream<any>;
 
+type InitialConfig = {
+  last_build_time: number;
+  production: boolean;
+  git_repository: string;
+  github: string;
+  pseudo: string;
+  email: string;
+  twitter: string;
+};
+
 export interface Sources {
   DOM: DOMSource;
   History: HistoryStream;
-  Config: AnyStream;
+  Config: Stream<InitialConfig>;
 }
 
 export interface RootSinks {

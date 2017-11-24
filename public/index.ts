@@ -8,6 +8,11 @@ const makeConfigDriver = () =>
   xs.of({
     last_build_time: __LAST_BUILD_TIME__,
     production: process.env.NODE_ENV === 'production',
+    pseudo: 'sinewyk',
+    git_repository: 'https://github.com/Sinewyk/sinewyk-stuff',
+    github: 'https://github.com/Sinewyk',
+    email: 'sinewyk@gmail.com',
+    twitter: 'https://twitter.com/sinewyk',
   });
 
 if (process.env.NODE_ENV === 'production') {

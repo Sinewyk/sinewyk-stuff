@@ -22,7 +22,9 @@ export default function List_Posts(sources: PageSources) {
         <ul>
           {posts.map(post => (
             <li className={typo.reading}>
-              <a href={`${pathname}/${post.slug}`}>{post.title}</a>&nbsp;&nbsp;&nbsp;
+              <a target="" href={`${pathname}/${post.slug}`}>
+                {post.title}
+              </a>&nbsp;&nbsp;&nbsp;
               <Date_ timestamp={post.updated_at} format="simple" />
             </li>
           ))}

@@ -24,7 +24,7 @@ export default function Footer(sources: Sources) {
               <a
                 className={styles.link}
                 target="_blank"
-                href="https://github.com/Sinewyk/sinewyk-stuff"
+                href={config.git_repository}
               >
                 Source code
               </a>
