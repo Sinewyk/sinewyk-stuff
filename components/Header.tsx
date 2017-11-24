@@ -1,6 +1,7 @@
 import { createElement } from 'snabbdom-pragma';
 import { Sources } from '../src/interfaces';
 import { styles as ContainerStyles } from './Container';
+import { Paragraph } from './Paragraph';
 
 import styles from './Header.css';
 
@@ -13,7 +14,9 @@ export default function Header(sources: Sources) {
           <header className="">
             <div className={styles.header} />
             <div className={`${styles.sub} ${ContainerStyles.container}`}>
-              <p className={styles.name}>Serge 'Sinewyk' Havas</p>
+              <Paragraph className={styles.name}>
+                Serge 'Sinewyk' Havas
+              </Paragraph>
             </div>
           </header>
         ) : (

@@ -1,0 +1,3 @@
+.paragraph {
+  composes: reading from '../styles/typography.css';
+}

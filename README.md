@@ -1,6 +1,6 @@
 # What
 
-My stuff
+My stuff, repository of posts, tidbits, and general software dump probably ...
 
 # How
 I want to play around with streams (reactive functional programming) which means cyclejs.
