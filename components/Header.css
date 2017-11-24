@@ -7,6 +7,12 @@
   composes: centered from '../styles/alignment.css';
 }
 
+.navigationLinks {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
 .name {
   font-size: 1.3rem;
   font-weight: bold;
