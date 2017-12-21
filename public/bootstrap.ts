@@ -43,9 +43,7 @@ if (process.env.NODE_ENV === 'production') {
 
   if ((module as any).hot) {
     (module as any).hot.accept('../src/app', () => {
-      const newApp = require('../src/app').default;
-
-      rerun(newApp);
+      rerun(app);
     });
   }
 }
