@@ -2,9 +2,10 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const commonConf = require('./webpack.common');
 const BabelMinifyWebpackPlugin = require('babel-minify-webpack-plugin');
-const StatsPlugin = require('stats-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin;
 
 const cssExtractor = new ExtractTextPlugin({
   filename: '[name].[contenthash].css',
@@ -40,7 +41,9 @@ module.exports = merge(commonConf, {
                   ctx: {
                     autoprefixer: {},
                     cssnano: {
-                      discardComments: { removeAll: true },
+                      discardComments: {
+                        removeAll: true,
+                      },
                     },
                   },
                 },
@@ -59,7 +62,9 @@ module.exports = merge(commonConf, {
         removeConsole: true,
         removeDebugger: true,
       },
-      { comments: false },
+      {
+        comments: false,
+      },
     ),
     new webpack.DefinePlugin({
       'process.env': {
@@ -67,7 +72,13 @@ module.exports = merge(commonConf, {
       },
       __LAST_BUILD_TIME__: Date.now(),
     }),
-    new StatsPlugin('stats.json'),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'disabled',
+      generateStatsFile: true,
+      statsOptions: {
+        source: false,
+      },
+    }),
     new CompressionPlugin(),
   ],
 });

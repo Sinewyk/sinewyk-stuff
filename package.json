@@ -45,5 +45,8 @@
     "path-to-regexp": "^2.1.0",
     "snabbdom-pragma": "^2.5.0",
     "xstream": "^11.0.0"
+  },
+  "resolutions": {
+    "webpack-sources": "1.0.1"
   }
 }
