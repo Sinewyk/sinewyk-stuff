@@ -6,6 +6,8 @@
     "analyse": "yarn build && webpack-bundle-analyzer dist/stats.json",
     "analyze": "yarn analyse",
     "serve": "serve dist --port 8000 --open --single",
+    "prettify":
+      "prettier --write components/** pages/** posts/*.tsx? public/*.ts src/** styles/** declaration.d.ts package.json postcss.config.js webpack*",
     "watch": "webpack-dev-server --hot --config=./webpack.dev"
   },
   "devDependencies": {
@@ -48,5 +50,10 @@
   },
   "resolutions": {
     "webpack-sources": "1.0.1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "all"
   }
 }

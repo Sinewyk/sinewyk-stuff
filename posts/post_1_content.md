@@ -4,7 +4,7 @@ Recently I've read this:
 
 Do not wish for "simpler times".
 
-Life's story boils down to "__Evolve or die__".
+Life's story boils down to "**Evolve or die**".
 
 Species that couldn't adapt died out, those that adapted survived and finally thrived.
 
@@ -20,7 +20,7 @@ You are admitting that you have a weakness. Yet you are also admitting that you 
 
 And that's all I could look for in another human being, and maybe a friend. That you just won't sit still; embrace your life, grow, adapt, and be awesome.
 
-__NB__: I've read that in the context of functional programming, and it really is hard though.
+**NB**: I've read that in the context of functional programming, and it really is hard though.
 
 Also, "we" (I wasn't born yet) settled on those names "monad, bifunctor" or whatever ... I'm pretty sure those names make it harder to get a handle on this stuff.
 
