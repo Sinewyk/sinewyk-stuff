@@ -22,7 +22,21 @@ module.exports = {
       },
       {
         test: /\.md$/,
-        use: ['html-loader', 'markdown-loader'],
+        use: [
+          {
+            loader: './scripts/metaLoader',
+            options: {
+              foo: 'bar',
+            },
+          },
+          {
+            loader: 'html-loader',
+            options: {
+              exportAsEs6Default: true,
+            },
+          },
+          'markdown-loader',
+        ],
         exclude: /node_modules/,
       },
     ],
