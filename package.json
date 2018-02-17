@@ -6,16 +6,15 @@
     "analyse": "yarn build && webpack-bundle-analyzer dist/stats.json",
     "analyze": "yarn analyse",
     "serve": "serve dist --port 8000 --open --single",
-    "prettify":
-      "prettier --write components/** pages/** posts/*.tsx? public/*.ts src/** styles/** declaration.d.ts package.json postcss.config.js webpack*",
+    "prettify": "prettier --write components/** pages/** posts/*.tsx? public/*.ts src/** styles/** declaration.d.ts package.json postcss.config.js webpack*",
     "watch": "webpack-dev-server --hot --config=./webpack.dev"
   },
   "devDependencies": {
     "@types/history": "^4.6.1",
     "@types/node": "^8.0.30",
     "@types/path-to-regexp": "^1.7.0",
-    "autoprefixer": "^7.1.4",
-    "babel-minify-webpack-plugin": "^0.2.0",
+    "autoprefixer": "^8.0.0",
+    "babel-minify-webpack-plugin": "^0.3.0",
     "clean-webpack-plugin": "^0.1.17",
     "compression-webpack-plugin": "^1.0.1",
     "cross-env": "^5.0.5",
@@ -30,7 +29,7 @@
     "postcss-loader": "^2.0.6",
     "prettier": "^1.7.0",
     "serve": "^6.4.1",
-    "style-loader": "^0.19.0",
+    "style-loader": "^0.20.2",
     "ts-loader": "^3.0.0",
     "typescript": "2.5.3",
     "webpack": "^3.6.0",
