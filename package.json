@@ -12,7 +12,6 @@
   "devDependencies": {
     "@types/history": "^4.6.1",
     "@types/node": "^8.0.30",
-    "@types/path-to-regexp": "^1.7.0",
     "autoprefixer": "^8.0.0",
     "babel-minify-webpack-plugin": "^0.3.0",
     "clean-webpack-plugin": "^0.1.17",
