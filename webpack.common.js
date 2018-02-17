@@ -24,7 +24,7 @@ module.exports = {
         test: /\.md$/,
         use: [
           {
-            loader: './scripts/metaLoader',
+            loader: './scripts/gitMetaLoader',
             options: {
               foo: 'bar',
             },

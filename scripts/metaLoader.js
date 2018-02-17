@@ -1,3 +1,14 @@
+/**
+ * Dead code, but nice experiment =D
+ * May delete later ^^
+ *
+ * It works, but need filesystem support, it breaks down in a virtual filesystem,
+ * and git itself only store content of file, so if you checkout, you just may
+ * overwrite everything, which is why you should look for this data in git itself ^^
+ *
+ * see REPO/scripts/gitMetaLoader.js for a working example =).
+ */
+
 const fs = require('fs');
 
 const parseInt10 = int => parseInt(int, 10);
