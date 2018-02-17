@@ -25,7 +25,7 @@ export default function List_Posts(sources: PageSources) {
               <a target="" href={`${pathname}/${post.slug}`}>
                 {post.title}
               </a>&nbsp;&nbsp;&nbsp;
-              <Date_ timestamp={post.updated_at} format="simple" />
+              <Date_ timestamp={post.created_at} format="simple" />
             </li>
           ))}
         </ul>
