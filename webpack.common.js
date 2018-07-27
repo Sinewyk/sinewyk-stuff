@@ -14,32 +14,28 @@ module.exports = {
     }),
   ],
   module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.md$/,
-        use: [
-          {
-            loader: './scripts/gitMetaLoader',
-            options: {
-              foo: 'bar',
-            },
+    rules: [{
+      test: /\.tsx?$/,
+      use: 'ts-loader',
+      exclude: /node_modules/,
+    }, {
+      test: /\.md$/,
+      use: [{
+          loader: './scripts/gitMetaLoader',
+          options: {
+            foo: 'bar',
           },
-          {
-            loader: 'html-loader',
-            options: {
-              exportAsEs6Default: true,
-            },
+        },
+        {
+          loader: 'html-loader',
+          options: {
+            exportAsEs6Default: true,
           },
-          'markdown-loader',
-        ],
-        exclude: /node_modules/,
-      },
-    ],
+        },
+        'markdown-loader',
+      ],
+      exclude: /node_modules/,
+    }],
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.json'],
