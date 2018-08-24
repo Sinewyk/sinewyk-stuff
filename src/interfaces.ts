@@ -1,5 +1,5 @@
 import { Stream } from 'xstream';
-import { VNode, DOMSource } from '@cycle/dom';
+import { VNode, MainDOMSource } from '@cycle/dom';
 import { Location } from 'history';
 import { HistoryInput } from '@cycle/history';
 
@@ -17,7 +17,7 @@ type InitialConfig = {
 };
 
 export interface Sources {
-  DOM: DOMSource;
+  DOM: MainDOMSource;
   History: HistoryStream;
   Config: Stream<InitialConfig>;
 }
