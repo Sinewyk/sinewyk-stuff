@@ -1,7 +1,7 @@
 import { Stream } from 'xstream';
 import { VNode, MainDOMSource } from '@cycle/dom';
 import { Location } from 'history';
-import { HistoryInput } from '@cycle/history';
+import { HistoryInput, GenericInput } from '@cycle/history';
 
 export type HistoryStream = Stream<Location>;
 export type AnyStream = Stream<any>;
@@ -24,7 +24,7 @@ export interface Sources {
 
 export interface RootSinks {
   DOM: Stream<VNode>;
-  History: Stream<HistoryInput>;
+  History: Stream<HistoryInput | GenericInput | string>;
 }
 
 export type PageSources = Sources & {
