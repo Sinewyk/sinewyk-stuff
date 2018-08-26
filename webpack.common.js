@@ -1,6 +1,7 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -8,6 +9,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
+    new FaviconsWebpackPlugin('./public/reflect_cropped.jpg'),
     new HtmlWebpackPlugin({
       title: "Sinewyk's Stuff",
       template: 'public/index.ejs',
