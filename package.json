@@ -5,7 +5,7 @@
     "build": "cross-env NODE_ENV=production webpack --config=./webpack.prod",
     "analyse": "yarn build && webpack-bundle-analyzer dist/stats.json",
     "analyze": "yarn analyse",
-    "serve": "serve dist --port 8000 --open --single",
+    "serve": "serve dist --listen=8000 --single",
     "prettify": "prettier --write components/** pages/** posts/*.tsx? public/*.ts src/** styles/** declaration.d.ts package.json postcss.config.js webpack*",
     "watch": "webpack-dev-server --hot --config=./webpack.dev"
   },
@@ -27,7 +27,7 @@
     "mini-css-extract-plugin": "^0.4.1",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.7.0",
-    "serve": "^6.4.1",
+    "serve": "^10.0.0",
     "style-loader": "^0.22.1",
     "ts-loader": "^4.4.2",
     "typescript": "~2.8.0",
