@@ -38,8 +38,8 @@ function Site(sources: Sources) {
 
   return {
     DOM: xs
-      .combine(footer.DOM, header.DOM, pageSinks.DOM)
-      .map(([footerDOM, headerDOM, pageDOM]) => (
+      .combine(header.DOM, pageSinks.DOM, footer.DOM)
+      .map(([headerDOM, pageDOM, footerDOM]) => (
         <div>
           {headerDOM}
           {pageDOM}
