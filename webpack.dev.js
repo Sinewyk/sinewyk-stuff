@@ -20,7 +20,6 @@ module.exports = {
           options: {
             sourceMap: true,
             importLoaders: 1,
-            module: true,
             modules: true,
             localIdentName: '[path]_[name]_[local]',
           },

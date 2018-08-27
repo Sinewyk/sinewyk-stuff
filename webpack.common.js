@@ -17,6 +17,12 @@ module.exports = {
   ],
   module: {
     rules: [{
+      test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+      loader: 'url-loader',
+      options: {
+        limit: 10000
+      }
+    }, {
       test: /\.tsx?$/,
       use: 'ts-loader',
       exclude: /node_modules/,
@@ -37,12 +43,6 @@ module.exports = {
         'markdown-loader',
       ],
       exclude: /node_modules/,
-    }, {
-      test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
-      loader: 'url-loader',
-      options: {
-        limit: 10000
-      }
     }],
   },
   resolve: {

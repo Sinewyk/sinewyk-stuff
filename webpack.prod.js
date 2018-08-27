@@ -11,19 +11,14 @@ module.exports = {
   mode: 'production',
   devtool: 'source-map',
   output: {
-    filename: '[name].[hash].js',
+    filename: '[name].[contenthash].js',
   },
   profile: true,
   module: {
     rules: [...commonConf.module.rules, {
       test: /\.css$/,
       use: [{
-          loader: MiniCssExtractPlugin.loader,
-          options: {
-            // you can specify a publicPath here
-            // by default it use publicPath in webpackOptions.output
-            publicPath: '../'
-          }
+          loader: MiniCssExtractPlugin.loader
         }, {
           loader: 'css-loader',
           options: {
@@ -57,8 +52,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: "[name].[hash].css",
-      chunkFilename: "[id].[hash].css"
+      filename: "[name].[contenthash].css",
+      chunkFilename: "[id].[contenthash].css"
     }),
     new BabelMinifyWebpackPlugin({
       removeConsole: true,
