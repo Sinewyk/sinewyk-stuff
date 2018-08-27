@@ -13,7 +13,11 @@ export default function Header(sources: Sources) {
       ({ pathname }) =>
         pathname === '/' ? (
           <header>
-            <div className={styles.header} />
+            <div className={styles.headerIndex} />
+            <div
+              className={styles.avatar}
+              title="These are &quot;Reflectacles Ghost&quot; on my face if you are curious"
+            />
             <div className={`${styles.sub} ${ContainerStyles.container}`}>
               <Paragraph className={styles.name}>
                 Serge 'Sinewyk' Havas
@@ -23,6 +27,10 @@ export default function Header(sources: Sources) {
         ) : (
           <header>
             <div className={styles.header} />
+            <div
+              className={styles.avatar}
+              title="These are &quot;Reflectacles Ghost&quot; on my face if you are curious"
+            />
             <div className={ContainerStyles.container}>
               <a className={styles.navigationLinks} href={back(pathname)}>
                 Back

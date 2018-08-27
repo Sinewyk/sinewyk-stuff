@@ -3,6 +3,10 @@ const commonConf = require('./webpack.common');
 const BabelMinifyWebpackPlugin = require('babel-minify-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const {
+  ImageminWebpackPlugin
+} = require("imagemin-webpack");
+const imageminJpegtran = require("imagemin-jpegtran");
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin;
 
@@ -49,6 +53,15 @@ module.exports = {
   },
   plugins: [
     ...commonConf.plugins,
+    new ImageminWebpackPlugin({
+      imageminOptions: {
+        plugins: [
+          imageminJpegtran({
+            progressive: true,
+          })
+        ]
+      }
+    }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional

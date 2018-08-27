@@ -3,8 +3,30 @@
   height: 100px;
 }
 
-.sub {
+.headerIndex {
+  height: calc(100vh - 120px);
+  max-height: 400px;
+  background-image: url('../public/header_photo.jpg');
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: 100%;
+}
+
+.avatar {
+  position: relative;
+  top: -50px;
+  margin-bottom: -50px;
+  background-image: url('../public/reflect_cropped.jpg');
+  background-size: cover;
+  height: 100px;
+  width: 100px;
   composes: centered from '../styles/alignment.css';
+  border-radius: 50px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 1);
+}
+
+.sub {
+  composes: centeredContent from '../styles/alignment.css';
 }
 
 .navigationLinks {

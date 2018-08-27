@@ -1,5 +1,5 @@
 .root {
-  composes: centered from '../styles/alignment.css';
+  composes: centeredContent from '../styles/alignment.css';
   composes: bg-grey from '../styles/colors.css';
   composes: _grey from '../styles/colors.css';
   margin-top: 60px;
