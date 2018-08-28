@@ -16,6 +16,7 @@ module.exports = {
   devtool: 'source-map',
   output: {
     filename: '[name].[contenthash].js',
+    publicPath: '/',
   },
   profile: true,
   module: {
