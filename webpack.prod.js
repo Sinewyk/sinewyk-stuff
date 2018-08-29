@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const commonConf = require('./webpack.common');
-const BabelMinifyWebpackPlugin = require('babel-minify-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {
@@ -19,6 +19,17 @@ module.exports = {
     publicPath: '/',
   },
   profile: true,
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true,
+        extractComments: true,
+        warningsFilter: () => true,
+      }),
+    ]
+  },
   module: {
     rules: [...commonConf.module.rules, {
       test: /\.css$/,
@@ -69,12 +80,6 @@ module.exports = {
       filename: "[name].[contenthash].css",
       chunkFilename: "[id].[contenthash].css"
     }),
-    new BabelMinifyWebpackPlugin({
-      removeConsole: true,
-      removeDebugger: true,
-    }, {
-      comments: false,
-    }, ),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
