@@ -7,13 +7,8 @@ interface Props {
   className?: string;
 }
 
-// @TODO (sinewyk): track https://github.com/Swizz/snabbdom-pragma/issues/28 ?
-function Paragraph(props: Props, children: VNode) {
-  return (
-    <p className={`${styles.paragraph} ${props && props.className}`}>
-      {children}
-    </p>
-  );
+function Paragraph({ className }: Props, children: VNode) {
+  return <p className={`${styles.paragraph} ${className}`}>{children}</p>;
 }
 
 export { Paragraph, styles };

@@ -1,6 +1,6 @@
 import xs from 'xstream';
 import { createElement } from 'snabbdom-pragma';
-import { HistoryStream, PageSources, Post } from '../src/interfaces';
+import { PageSources, Post } from '../src/interfaces';
 import posts from '../posts';
 import { Container } from './Container';
 import NotFound from './NotFound';
@@ -9,7 +9,7 @@ import { Date_ } from './Date';
 import styles from './Post.css';
 
 export default function Post(sources: PageSources) {
-  const history$: HistoryStream = sources.History;
+  const history$ = sources.History;
   const params$ = sources.Params;
   return {
     DOM: xs.combine(params$, history$).map(([{ slug }]) => {
