@@ -3,6 +3,7 @@ import { createElement } from 'snabbdom-pragma';
 import { HistoryStream, PageSources, Post } from '../src/interfaces';
 import posts from '../posts';
 import { Container } from './Container';
+import NotFound from './NotFound';
 import { Date_ } from './Date';
 
 import styles from './Post.css';
@@ -12,7 +13,12 @@ export default function Post(sources: PageSources) {
   const params$ = sources.Params;
   return {
     DOM: xs.combine(params$, history$).map(([{ slug }]) => {
-      const post = posts.find(post => post.slug === slug) as Post;
+      const post = posts.find(post => post.slug === slug);
+
+      if (!post) {
+        return <NotFound />;
+      }
+
       return (
         <Container>
           <h2 className={styles.title}>{post.title}</h2>

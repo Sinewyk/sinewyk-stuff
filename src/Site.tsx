@@ -3,6 +3,7 @@ import xs from 'xstream';
 import { createElement } from 'snabbdom-pragma';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import NotFound from '../components/NotFound';
 import { extractSinks } from 'cyclejs-utils';
 import { Sources, Route } from '../src/interfaces';
 import { route } from '../src/routing';
@@ -24,7 +25,7 @@ function Site(sources: Sources) {
     const { pathname } = location;
 
     const pageFactory = route(pathname, routes, () => ({
-      DOM: xs.of(<div>Route not found :'(</div>),
+      DOM: xs.of(<NotFound />),
     }));
 
     const page = pageFactory(sources);
