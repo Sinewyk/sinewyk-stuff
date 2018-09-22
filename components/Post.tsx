@@ -12,7 +12,7 @@ export default function Post(sources: PageSources) {
   const history$ = sources.History;
   const params$ = sources.Params;
   return {
-    DOM: xs.combine(params$, history$).map(([{ slug }]) => {
+    DOM: xs.combine(params$, history$.take(1)).map(([{ slug }]) => {
       const post = posts.find(post => post.slug === slug);
 
       if (!post) {
