@@ -1,7 +1,7 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -16,34 +16,39 @@ module.exports = {
     }),
   ],
   module: {
-    rules: [{
-      test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
-      loader: 'url-loader',
-      options: {
-        limit: 10000
-      }
-    }, {
-      test: /\.tsx?$/,
-      use: 'ts-loader',
-      exclude: /node_modules/,
-    }, {
-      test: /\.md$/,
-      use: [{
-          loader: './scripts/gitMetaLoader',
-          options: {
-            foo: 'bar',
-          },
+    rules: [
+      {
+        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
         },
-        {
-          loader: 'html-loader',
-          options: {
-            exportAsEs6Default: true,
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: './scripts/gitMetaLoader',
+            options: {
+              foo: 'bar',
+            },
           },
-        },
-        'markdown-loader',
-      ],
-      exclude: /node_modules/,
-    }],
+          {
+            loader: 'html-loader',
+            options: {
+              exportAsEs6Default: true,
+            },
+          },
+          'markdown-loader',
+        ],
+        exclude: /node_modules/,
+      },
+    ],
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.json'],

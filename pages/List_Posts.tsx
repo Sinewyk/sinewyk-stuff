@@ -24,7 +24,8 @@ export default function List_Posts(sources: PageSources) {
             <li className={typo.reading}>
               <a target="" href={`${pathname}/${post.slug}`}>
                 {post.title}
-              </a>&nbsp;&nbsp;&nbsp;
+              </a>
+              &nbsp;&nbsp;&nbsp;
               <Date_ timestamp={post.created_at} format="simple" />
             </li>
           ))}
