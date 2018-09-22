@@ -3,12 +3,15 @@
   "version": "0.1.0",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config=./webpack.prod",
+    "build:test": "cross-env TESTING=true yarn build",
     "analyse": "yarn build && webpack-bundle-analyzer dist/stats.json",
     "analyze": "yarn analyse",
     "serve": "serve dist --listen=8000 --single",
+    "serve:test": "yarn build:test && serve dist --listen=8000 --single",
     "prettify": "prettier --write components/** pages/** posts/*.tsx? public/*.ts src/** styles/** declaration.d.ts package.json postcss.config.js webpack*",
-    "cypress:open": "cypress open",
-    "test:server": "cross-env TESTING=true yarn build && yarn serve",
+    "test:dev": "cypress open",
+    "test": "cypress run",
+    "ci": "start-server-and-test serve:test http://localhost:8000 test",
     "watch": "webpack-dev-server --hot --config=./webpack.dev"
   },
   "devDependencies": {
@@ -33,6 +36,7 @@
     "postcss-loader": "^3.0.0",
     "prettier": "^1.7.0",
     "serve": "^10.0.0",
+    "start-server-and-test": "^1.7.1",
     "style-loader": "^0.22.1",
     "ts-loader": "^4.4.2",
     "typescript": "~2.8.0",
