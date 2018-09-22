@@ -1,5 +1,7 @@
 # What
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Sinewyk/sinewyk-stuff.svg)](https://greenkeeper.io/)
+
 My stuff, repository of posts, tidbits, and general software dump probably ...
 
 # How
