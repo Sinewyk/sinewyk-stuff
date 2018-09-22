@@ -4,3 +4,6 @@
 #project
 node_modules
 dist
+
+#testing
+cypress/videos

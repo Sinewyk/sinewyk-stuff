@@ -43,6 +43,10 @@ module.exports = {
               sourceMap: true,
               importLoaders: 1,
               modules: true,
+              // When testing, keep css name so that we can ... test ?
+              [process.env.TESTING
+                ? 'localIdentName'
+                : 'who_cares']: '[path]_[name]_[local]',
             },
           },
           {
