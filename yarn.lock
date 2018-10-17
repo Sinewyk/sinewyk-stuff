@@ -2,13 +2,14 @@
 # yarn lockfile v1
 
 
-"@cycle/dom@^21.0.0":
-  version "21.0.0"
-  resolved "https://registry.yarnpkg.com/@cycle/dom/-/dom-21.0.0.tgz#c41868cae949731ea0b82b7526b4a2225cf221a2"
+"@cycle/dom@^22.0.0":
+  version "22.0.0"
+  resolved "https://registry.yarnpkg.com/@cycle/dom/-/dom-22.0.0.tgz#887236911eaaa754f79cb656932206b1764d24f2"
   dependencies:
-    "@cycle/run" "4.4.0"
-    snabbdom "0.7.1"
-    snabbdom-selector "^3.0.0"
+    "@cycle/run" "^5.1.0"
+    rxjs "^6.3.3"
+    snabbdom "^0.7.2"
+    snabbdom-selector "^4.0.0"
     xstream "11.x"
 
 "@cycle/history@^6.10.0":
@@ -27,7 +28,7 @@
     "@cycle/run" "^4.4.0"
     xstream "^11.7.0"
 
-"@cycle/run@*", "@cycle/run@4.4.0", "@cycle/run@^4.4.0":
+"@cycle/run@*", "@cycle/run@^4.4.0":
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/@cycle/run/-/run-4.4.0.tgz#8013702548b1992f665b9f2f42882996871ccf8f"
   dependencies:
@@ -45,6 +46,13 @@
   resolved "https://registry.yarnpkg.com/@cycle/run/-/run-1.0.0.tgz#67d3d9008f722a6e5c41bddd415abf5e615ce6f8"
   dependencies:
     xstream "10.x"
+
+"@cycle/run@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@cycle/run/-/run-5.1.0.tgz#f2af7459a0809d4d97ae0dbce45b1194610208c5"
+  dependencies:
+    quicktask "1.1.0"
+    xstream "10.x || 11.x"
 
 "@cycle/time@^0.8.0":
   version "0.8.0"
@@ -6319,6 +6327,12 @@ rxjs@^6.1.0:
   dependencies:
     tslib "^1.9.0"
 
+rxjs@^6.3.3:
+  version "6.3.3"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.3.3.tgz#3c6a7fa420e844a81390fb1158a9ec614f4bad55"
+  dependencies:
+    tslib "^1.9.0"
+
 safe-buffer@5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
@@ -6562,15 +6576,15 @@ snabbdom-pragma@^2.5.0:
   dependencies:
     extend "^3.0.0"
 
-snabbdom-selector@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/snabbdom-selector/-/snabbdom-selector-3.0.0.tgz#787011a5e89e8b1fa2fb768d4bb52a84396714ec"
+snabbdom-selector@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/snabbdom-selector/-/snabbdom-selector-4.0.0.tgz#9eee4c69838962939762473612c0be01837f0248"
   dependencies:
-    tree-selector "^1.1.0"
+    tree-selector "^2.0.0"
 
-snabbdom@0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/snabbdom/-/snabbdom-0.7.1.tgz#c1e9eddfad2c02ebc2cf66aaefb040419d059597"
+snabbdom@^0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/snabbdom/-/snabbdom-0.7.2.tgz#e9d3930e6374ef8766706ccee4c6ed7b331afa64"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
@@ -7173,9 +7187,9 @@ tough-cookie@~2.4.3:
     psl "^1.1.24"
     punycode "^1.4.1"
 
-tree-selector@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/tree-selector/-/tree-selector-1.1.0.tgz#e47bbb7174b3040328d04da6c80fcabf8819b129"
+tree-selector@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/tree-selector/-/tree-selector-2.1.0.tgz#281439d6df074ca9f629ecc409407c7c50a41ac8"
 
 trim-newlines@^1.0.0:
   version "1.0.0"
