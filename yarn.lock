@@ -11,12 +11,12 @@
     snabbdom-selector "^3.0.0"
     xstream "11.x"
 
-"@cycle/history@^6.10.0":
-  version "6.10.0"
-  resolved "https://registry.yarnpkg.com/@cycle/history/-/history-6.10.0.tgz#e9667ed05f6d7c8d6b53890b2c9b5c7f6e459ac6"
+"@cycle/history@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@cycle/history/-/history-7.0.0.tgz#59e1e4514154dcb99b767b94f240f0e971fb0e91"
   dependencies:
-    "@cycle/run" "3.4"
-    "@types/history" "4.6.x"
+    "@cycle/run" "^5.1.0"
+    "@types/history" "^4.7.1"
     history "4.7.x"
     xstream "11.x"
 
@@ -34,17 +34,18 @@
     quicktask "1.1.0"
     xstream "10.x || 11.x"
 
-"@cycle/run@3.4":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@cycle/run/-/run-3.4.0.tgz#113844add669ace91d245842522f3733ba5bd393"
-  dependencies:
-    xstream "10.x || 11.x"
-
 "@cycle/run@^1.0.0-rc.9":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@cycle/run/-/run-1.0.0.tgz#67d3d9008f722a6e5c41bddd415abf5e615ce6f8"
   dependencies:
     xstream "10.x"
+
+"@cycle/run@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@cycle/run/-/run-5.1.0.tgz#f2af7459a0809d4d97ae0dbce45b1194610208c5"
+  dependencies:
+    quicktask "1.1.0"
+    xstream "10.x || 11.x"
 
 "@cycle/time@^0.8.0":
   version "0.8.0"
@@ -97,9 +98,13 @@
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.0.8.tgz#d27600e9ba2f371e08695d90a0fe0408d89c7be7"
 
-"@types/history@4.6.x", "@types/history@^4.6.1":
+"@types/history@^4.6.1":
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/@types/history/-/history-4.6.2.tgz#12cfaba693ba20f114ed5765467ff25fdf67ddb0"
+
+"@types/history@^4.7.1":
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.1.tgz#66849a23ceef917b57f0787c885f41ce03480f5c"
 
 "@types/jquery@*":
   version "3.3.9"
