@@ -49,7 +49,7 @@
   "dependencies": {
     "@cycle/dom": "^21.0.0",
     "@cycle/history": "^6.10.0",
-    "@cycle/run": "^4.4.0",
+    "@cycle/run": "^5.1.0",
     "cyclejs-utils": "^3.0.2",
     "normalize.css": "^8.0.0",
     "path-to-regexp": "^2.1.0",
