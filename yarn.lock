@@ -46,6 +46,13 @@
   dependencies:
     xstream "10.x"
 
+"@cycle/run@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@cycle/run/-/run-5.1.0.tgz#f2af7459a0809d4d97ae0dbce45b1194610208c5"
+  dependencies:
+    quicktask "1.1.0"
+    xstream "10.x || 11.x"
+
 "@cycle/time@^0.8.0":
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/@cycle/time/-/time-0.8.0.tgz#ac815c60d2dca43ed1675521164ffd6c00e0f7d5"
