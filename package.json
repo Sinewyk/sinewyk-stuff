@@ -47,7 +47,7 @@
     "webpack-dev-server": "^3.1.5"
   },
   "dependencies": {
-    "@cycle/dom": "^21.0.0",
+    "@cycle/dom": "^22.0.0",
     "@cycle/history": "^6.10.0",
     "@cycle/run": "^4.4.0",
     "cyclejs-utils": "^3.0.2",

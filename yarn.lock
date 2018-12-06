@@ -2,14 +2,15 @@
 # yarn lockfile v1
 
 
-"@cycle/dom@^21.0.0":
-  version "21.0.0"
-  resolved "https://registry.yarnpkg.com/@cycle/dom/-/dom-21.0.0.tgz#c41868cae949731ea0b82b7526b4a2225cf221a2"
-  integrity sha512-R2kn5qstw3JNUOdKPEgrykW4QlzKRjOUfJ8T4H2eum4qjhZwMHwBRqZGexHjpgX9VGKRfSGecTRqG5AaaH8AZA==
+"@cycle/dom@^22.0.0":
+  version "22.1.0"
+  resolved "https://registry.yarnpkg.com/@cycle/dom/-/dom-22.1.0.tgz#2820e365987bda8b6b1edab3c44a8e0790f5dfc7"
+  integrity sha512-s4LnaI6M+jCLH0eJt/7UxlsVQai7M6/i4sY6Oh3ZJptMXJvCu9BG/U8o8VDoSBoPZzd8sDjwP3Em/7GIU2xdQg==
   dependencies:
-    "@cycle/run" "4.4.0"
-    snabbdom "0.7.1"
-    snabbdom-selector "^3.0.0"
+    "@cycle/run" "^5.1.0"
+    rxjs "^6.3.3"
+    snabbdom "^0.7.2"
+    snabbdom-selector "^4.0.0"
     xstream "11.x"
 
 "@cycle/history@^6.10.0":
@@ -30,7 +31,7 @@
     "@cycle/run" "^4.4.0"
     xstream "^11.7.0"
 
-"@cycle/run@*", "@cycle/run@4.4.0", "@cycle/run@^4.4.0":
+"@cycle/run@*", "@cycle/run@^4.4.0":
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/@cycle/run/-/run-4.4.0.tgz#8013702548b1992f665b9f2f42882996871ccf8f"
   integrity sha512-vVxnTqKKlgasE+we9X2z3og8z5KouO2RMiIgHWkVek+NomsdaeZwfvbutqzm3VToEImaz0DE2Iln9AxtCOVjpQ==
@@ -51,6 +52,14 @@
   integrity sha1-Z9PZAI9yKm5cQb3dQVq/XmFc5vg=
   dependencies:
     xstream "10.x"
+
+"@cycle/run@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@cycle/run/-/run-5.1.0.tgz#f2af7459a0809d4d97ae0dbce45b1194610208c5"
+  integrity sha512-zBjLl91JbGJt4TVqWnYXKvqgxDDZldjQeF71s6wOiY/Nt0RffaUACg5QkwNoHGLkFalBMp3Kmt+TNNONeA2N9w==
+  dependencies:
+    quicktask "1.1.0"
+    xstream "10.x || 11.x"
 
 "@cycle/time@^0.8.0":
   version "0.8.0"
@@ -7049,6 +7058,13 @@ rxjs@^6.1.0:
   dependencies:
     tslib "^1.9.0"
 
+rxjs@^6.3.3:
+  version "6.3.3"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.3.3.tgz#3c6a7fa420e844a81390fb1158a9ec614f4bad55"
+  integrity sha512-JTWmoY9tWCs7zvIk/CvRjhjGaOd+OVBM987mxFo+OW66cGpdKjZcpmc74ES1sB//7Kl/PAe8+wEakuhG4pcgOw==
+  dependencies:
+    tslib "^1.9.0"
+
 safe-buffer@5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
@@ -7328,17 +7344,17 @@ snabbdom-pragma@^2.5.0:
   dependencies:
     extend "^3.0.0"
 
-snabbdom-selector@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/snabbdom-selector/-/snabbdom-selector-3.0.0.tgz#787011a5e89e8b1fa2fb768d4bb52a84396714ec"
-  integrity sha512-+FVGXrYEzCs83PNE4ZMqNEbnsM3T8lyJqOV7bilp9JKewlU6eKKfHDahrSJY9x8IJLwWdJqJBHydBuhad5EUiw==
+snabbdom-selector@^4.0.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/snabbdom-selector/-/snabbdom-selector-4.1.0.tgz#209c0bd9478fc654892b4704fb40bafe556fa4c7"
+  integrity sha512-NDWOVSUR6yPlxH2F9XRwnF59UObLnItfSXcIw6+azkyrEDqT2c8pZ85UHvjijsgdve3g19qsC0/69tB5eZqTvA==
   dependencies:
-    tree-selector "^1.1.0"
+    tree-selector "^2.0.0"
 
-snabbdom@0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/snabbdom/-/snabbdom-0.7.1.tgz#c1e9eddfad2c02ebc2cf66aaefb040419d059597"
-  integrity sha512-uIOCq6rfkBZg2VdSopy9jL0cIOdrkHCcwOjDsLnjef6Z5oPoD8V7nKI8de4gP5GfvyqLY0RBDJP8LVU19Nsw5Q==
+snabbdom@^0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/snabbdom/-/snabbdom-0.7.2.tgz#e9d3930e6374ef8766706ccee4c6ed7b331afa64"
+  integrity sha512-rDY283fYUB/3z2tjXsRRccsbVJqmGLtP+iI1tfa1DDHo2xZ49cq1leq9JmYyvZQhESuYJRY/is6WYhP2UuiRVg==
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
@@ -7985,10 +8001,10 @@ tough-cookie@~2.4.3:
     psl "^1.1.24"
     punycode "^1.4.1"
 
-tree-selector@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/tree-selector/-/tree-selector-1.1.0.tgz#e47bbb7174b3040328d04da6c80fcabf8819b129"
-  integrity sha512-Zczqo5FCAqOEUOLcOLb7kRHWn9dMoWTe/b0uZb42h8ckzsEoWyBY7pEOXTeHlDT1Kq94mHvWft1Hq1fB+KmQdw==
+tree-selector@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/tree-selector/-/tree-selector-2.1.0.tgz#281439d6df074ca9f629ecc409407c7c50a41ac8"
+  integrity sha512-Giao15zxN5PvdzJv7HDubn3aSrlsWD9TG9xngYkiuChhIgPH6cQqvCGV5sJ/sWahm7nRtPx46hKax81eyz1sOg==
 
 trim-newlines@^1.0.0:
   version "1.0.0"
