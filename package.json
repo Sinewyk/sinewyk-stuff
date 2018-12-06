@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "@cycle/dom": "^21.0.0",
-    "@cycle/history": "^6.10.0",
+    "@cycle/history": "^7.0.0",
     "@cycle/run": "^4.4.0",
     "cyclejs-utils": "^3.0.2",
     "normalize.css": "^8.0.0",
