@@ -57,9 +57,6 @@
     "snabbdom-pragma": "^2.5.0",
     "xstream": "^11.7.0"
   },
-  "resolutions": {
-    "webpack-sources": "1.2.0"
-  },
   "prettier": {
     "singleQuote": true,
     "semi": true,
