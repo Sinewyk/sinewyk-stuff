@@ -3,7 +3,7 @@ const commonConf = require('./webpack.common');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { ImageminWebpackPlugin } = require('imagemin-webpack');
+const ImageminPlugin = require('imagemin-webpack');
 const imageminJpegtran = require('imagemin-jpegtran');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin;
@@ -70,7 +70,7 @@ module.exports = {
   },
   plugins: [
     ...commonConf.plugins,
-    new ImageminWebpackPlugin({
+    new ImageminPlugin({
       imageminOptions: {
         plugins: [
           imageminJpegtran({

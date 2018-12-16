@@ -1,4 +1,3 @@
-const path = require('path');
 const commonConf = require('./webpack.common');
 const webpack = require('webpack');
 
