@@ -56,7 +56,6 @@ module.exports = {
   ],
   devServer: {
     contentBase: './dist',
-    noInfo: true,
     port: 8000,
     historyApiFallback: true,
     overlay: {

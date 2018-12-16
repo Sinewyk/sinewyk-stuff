@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const commonConf = require('./webpack.common');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { ImageminWebpackPlugin } = require('imagemin-webpack');
@@ -19,11 +19,11 @@ module.exports = {
   profile: true,
   optimization: {
     minimizer: [
-      new UglifyJsPlugin({
+      new TerserPlugin({
         cache: true,
         parallel: true,
-        sourceMap: true,
         extractComments: true,
+        sourceMap: true,
         warningsFilter: () => true,
       }),
     ],
@@ -44,9 +44,7 @@ module.exports = {
               importLoaders: 1,
               modules: true,
               // When testing, keep css name so that we can ... test ?
-              [process.env.TESTING
-                ? 'localIdentName'
-                : 'who_cares']: '[path]_[name]_[local]',
+              localIdentName: process.env.TESTING ? '[path]_[name]_[local]' : '[hash:base64]',
             },
           },
           {

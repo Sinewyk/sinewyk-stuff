@@ -31,7 +31,7 @@ function Site(sources: Sources) {
     const page = pageFactory(sources);
 
     return {
-      DOM: page.DOM,
+      DOM: page.DOM!,
     };
   });
 
