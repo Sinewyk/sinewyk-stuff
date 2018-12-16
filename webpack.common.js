@@ -12,6 +12,10 @@ module.exports = {
     new FaviconsWebpackPlugin('./public/reflect_cropped.jpg'),
     new HtmlWebpackPlugin({
       title: "Sinewyk's Stuff",
+      author: "Serge 'Sinewyk' Havas",
+      keywords: 'sinewyk,blog,functional,programming,random,stuff',
+      description:
+        'Where I create and talk about stuff, my personal playground',
       template: 'public/index.ejs',
     }),
   ],
