@@ -52,7 +52,7 @@
     "@cycle/run": "^5.2.0",
     "cyclejs-utils": "^4.0.2",
     "normalize.css": "^8.0.0",
-    "path-to-regexp": "^2.1.0",
+    "path-to-regexp": "^3.0.0",
     "ramda": "^0.26.0",
     "snabbdom-pragma": "^2.5.0",
     "xstream": "^11.7.0"
