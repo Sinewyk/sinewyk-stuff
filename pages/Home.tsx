@@ -7,7 +7,7 @@ export default function Home(sources: Sources) {
   return {
     DOM: sources.Config.map(config => (
       <Container>
-        <Paragraph> ! In construction !</Paragraph>
+        <Paragraph>⚠️ In construction ⚠️</Paragraph>
         <Paragraph>Welcome to my stuff</Paragraph>
         <Paragraph>
           This is my playground ... and there is stuff to read too.
