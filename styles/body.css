@@ -1,6 +1,22 @@
 @import '~normalize.css';
+
+:global html,
+:global body {
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
 :global html {
   font-size: 18px;
+  box-sizing: border-box; /* box-model stuff */
+}
+
+:global *,
+:global *:before,
+:global *:after {
+  box-sizing: inherit;
 }
 
 :global body {

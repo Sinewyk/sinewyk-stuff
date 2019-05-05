@@ -32,7 +32,7 @@
     "imagemin-jpegtran": "^6.0.0",
     "imagemin-webpack": "^4.0.1",
     "markdown-loader": "^5.0.0",
-    "mini-css-extract-plugin": "^0.5.0",
+    "mini-css-extract-plugin": "^0.6.0",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.7.0",
     "serve": "^11.0.0",

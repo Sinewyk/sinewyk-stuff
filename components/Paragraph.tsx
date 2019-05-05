@@ -8,7 +8,11 @@ interface Props {
 }
 
 function Paragraph({ className }: Props, children: VNode) {
-  return <p className={`${styles.paragraph} ${className}`}>{children}</p>;
+  return (
+    <p className={`${styles.paragraph}${className ? ` ${className}` : ''}`}>
+      {children}
+    </p>
+  );
 }
 
 export { Paragraph, styles };
