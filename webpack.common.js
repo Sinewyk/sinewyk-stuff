@@ -8,7 +8,7 @@ module.exports = {
     app: './public/bootstrap.ts',
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(),
     new FaviconsWebpackPlugin('./public/reflect_cropped.jpg'),
     new HtmlWebpackPlugin({
       title: "Sinewyk's Stuff",
