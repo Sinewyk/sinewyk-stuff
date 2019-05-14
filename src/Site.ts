@@ -1,5 +1,4 @@
 import { h } from '@cycle/dom';
-import { Location } from 'history';
 import xs from 'xstream';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -10,6 +9,7 @@ import { route } from './routing';
 import List_Posts from '../pages/List_Posts';
 import Post from '../components/Post';
 import Home from '../pages/Home';
+import Labs from '../pages/Labs';
 
 const routes: Route[] = [
   { path: '/', value: Home },
@@ -17,11 +17,18 @@ const routes: Route[] = [
   { path: '/posts/:slug', value: Post },
 ];
 
+if (process.env.NODE_ENV === 'development') {
+  routes.push(
+    { path: '/labs', value: Labs },
+    { path: '/labs/:slug', value: Labs },
+  );
+}
+
 function Site(sources: Sources) {
   const footer = Footer(sources);
   const header = Header(sources);
 
-  const pageSinks$ = sources.History.map((location: Location) => {
+  const pageSinks$ = sources.History.map(location => {
     const { pathname } = location;
 
     const pageFactory = route(pathname, routes, () => ({
@@ -40,9 +47,9 @@ function Site(sources: Sources) {
   return {
     DOM: xs
       .combine(header.DOM, pageSinks.DOM, footer.DOM)
-      .map(([headerDOM, pageDOM, footerDOM]) =>
-        h('div', [headerDOM, pageDOM, footerDOM]),
-      ),
+      .map(([headerDOM, pageDOM, footerDOM]) => {
+        return h('div', [headerDOM, pageDOM, footerDOM]);
+      }),
   };
 }
 

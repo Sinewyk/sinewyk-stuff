@@ -15,6 +15,9 @@ export default function Home(sources: Sources) {
           `I'm primarly building this to play around with streams and just
           (reactive?) functional programming in general`,
         ),
+        process.env.NODE_ENV === 'development'
+          ? h('a', { attrs: { href: '/labs' } }, 'My labs')
+          : null,
         Paragraph('My resume will be here soon too'),
         Paragraph(`Here's some info dump for now:`),
         h('ul', [

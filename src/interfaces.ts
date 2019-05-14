@@ -43,7 +43,7 @@ export interface Component {
 
 export interface Route {
   path: string;
-  value: any;
+  value: Component;
 }
 
 export interface Post {
@@ -52,4 +52,9 @@ export interface Post {
   created_at: number;
   updated_at: number;
   content: string;
+}
+
+export interface Lab {
+  title: string;
+  slug: string;
 }
