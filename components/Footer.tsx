@@ -15,7 +15,7 @@ export default function Footer(sources: Sources) {
           <Container>
             {pathname !== '/' ? (
               <p>
-                <a target="" className={styles.link} href="/">
+                <a className={styles.link} href="/">
                   Home
                 </a>
               </p>
