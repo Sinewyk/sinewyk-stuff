@@ -50,7 +50,10 @@ export default function Footer(sources: Sources) {
               {
                 attrs: { title: config.last_build_time },
               },
-              ['Latest release', Date_({ timestamp: config.last_build_time })],
+              [
+                'Latest release: ',
+                Date_({ timestamp: config.last_build_time }),
+              ],
             ),
           ]),
         ),
