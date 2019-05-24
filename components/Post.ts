@@ -1,5 +1,5 @@
+import { h } from '@cycle/dom';
 import xs from 'xstream';
-import { createElement } from 'snabbdom-pragma';
 import { PageSources, Post } from '../src/interfaces';
 import posts from '../posts';
 import { Container } from './Container';
@@ -16,23 +16,20 @@ export default function Post(sources: PageSources) {
       const post = posts.find(post => post.slug === slug);
 
       if (!post) {
-        return <NotFound />;
+        return NotFound();
       }
 
-      return (
-        <Container>
-          <h2 className={styles.title}>{post.title}</h2>
-          <div className={styles.post} innerHTML={post.content} />
-          <div className={styles.dates}>
-            <p>
-              Created at: <Date_ timestamp={post.created_at} />
-            </p>
-            <p>
-              Last updated at: <Date_ timestamp={post.updated_at} />
-            </p>
-          </div>
-        </Container>
-      );
+      return Container([
+        h('h2', { attrs: { class: styles.title } }, post.title),
+        h('div', {
+          attrs: { class: styles.post },
+          props: { innerHTML: post.content },
+        }),
+        h('div', { attrs: { class: styles.dates } }, [
+          h('p', ['Created at: ', Date_({ timestamp: post.created_at })]),
+          h('p', ['Last updated at: ', Date_({ timestamp: post.updated_at })]),
+        ]),
+      ]);
     }),
   };
 }

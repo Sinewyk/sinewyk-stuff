@@ -1,12 +1,12 @@
+import { h } from '@cycle/dom';
 import { Location } from 'history';
 import xs from 'xstream';
-import { createElement } from 'snabbdom-pragma';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import NotFound from '../components/NotFound';
 import { extractSinks } from 'cyclejs-utils';
-import { Sources, Route } from '../src/interfaces';
-import { route } from '../src/routing';
+import { Sources, Route } from './interfaces';
+import { route } from './routing';
 import List_Posts from '../pages/List_Posts';
 import Post from '../components/Post';
 import Home from '../pages/Home';
@@ -25,7 +25,7 @@ function Site(sources: Sources) {
     const { pathname } = location;
 
     const pageFactory = route(pathname, routes, () => ({
-      DOM: xs.of(<NotFound />),
+      DOM: xs.of(NotFound()),
     }));
 
     const page = pageFactory(sources);
@@ -40,13 +40,9 @@ function Site(sources: Sources) {
   return {
     DOM: xs
       .combine(header.DOM, pageSinks.DOM, footer.DOM)
-      .map(([headerDOM, pageDOM, footerDOM]) => (
-        <div>
-          {headerDOM}
-          {pageDOM}
-          {footerDOM}
-        </div>
-      )),
+      .map(([headerDOM, pageDOM, footerDOM]) =>
+        h('div', [headerDOM, pageDOM, footerDOM]),
+      ),
   };
 }
 

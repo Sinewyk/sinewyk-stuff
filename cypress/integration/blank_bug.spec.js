@@ -1,5 +1,5 @@
 describe('target="_blank" bug', () => {
-  it('shows it', () => {
+  it('is fixed', () => {
     cy.visit('/');
     cy.get('a')
       .first()
