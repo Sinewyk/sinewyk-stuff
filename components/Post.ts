@@ -1,5 +1,4 @@
 import { h } from '@cycle/dom';
-import xs from 'xstream';
 import { PageSources, Post } from '../src/interfaces';
 import posts from '../posts';
 import { Container } from './Container';
@@ -9,10 +8,9 @@ import { Date_ } from './Date';
 import styles from './Post.css';
 
 export default function Post(sources: PageSources) {
-  const history$ = sources.History;
   const params$ = sources.Params;
   return {
-    DOM: xs.combine(params$, history$.take(1)).map(([{ slug }]) => {
+    DOM: params$.map(({ slug }) => {
       const post = posts.find(post => post.slug === slug);
 
       if (!post) {
