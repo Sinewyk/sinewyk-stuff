@@ -1,10 +1,13 @@
 import { h } from '@cycle/dom';
 import { Sources } from '../src/interfaces';
-import { Container, styles as ContainerStyles } from './Container';
+import { Container } from './Container';
 import { Paragraph } from './Paragraph';
 import { back } from '../src/back';
 
 import styles from './Header.css';
+
+const reflectacles =
+  'These are "Reflectacles Ghost" on my face if you are curious';
 
 export default function Header(sources: Sources) {
   const history$ = sources.History;
@@ -16,28 +19,22 @@ export default function Header(sources: Sources) {
             h('div', {
               attrs: {
                 class: styles.avatar,
-                title:
-                  'These are "Reflectacles Ghost" on my face if you are curious',
+                title: reflectacles,
               },
             }),
             h(
               'div',
               {
-                attrs: { class: `${styles.sub} ${ContainerStyles.container}` },
+                attrs: { class: `${styles.sub}` },
               },
-              [
-                Paragraph({ className: styles.name }, [
-                  `Serge 'Sinewyk' Havas`,
-                ]),
-              ],
+              Paragraph({ className: styles.name }, `Serge 'Sinewyk' Havas`),
             ),
           ])
         : h('header', [
             h('div', { attrs: { class: styles.header } }),
             h('div', {
               attrs: { class: styles.avatar },
-              title:
-                'These are "Reflectacles Ghost" on my face if you are curious',
+              title: reflectacles,
             }),
             Container([
               h(
@@ -51,9 +48,11 @@ export default function Header(sources: Sources) {
                 'Back',
               ),
               ' ',
-              h('a', { attrs: { class: styles.navigationLinks, href: '/' } }, [
+              h(
+                'a',
+                { attrs: { class: styles.navigationLinks, href: '/' } },
                 'Home',
-              ]),
+              ),
             ]),
           ]),
     ),

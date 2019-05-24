@@ -1,4 +1,5 @@
-import { VNode, h } from '@cycle/dom';
+import { h } from '@cycle/dom';
+import { VNodeChildren } from 'snabbdom/h';
 
 import styles from './Paragraph.css';
 
@@ -6,10 +7,7 @@ interface Props {
   className?: string;
 }
 
-function Paragraph(
-  { className }: Props,
-  children: Array<VNode | string> | undefined,
-) {
+function Paragraph({ className }: Props, children: VNodeChildren) {
   return h(
     'p',
     {

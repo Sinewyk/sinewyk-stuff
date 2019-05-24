@@ -7,18 +7,20 @@ export default function Home(sources: Sources) {
   return {
     DOM: sources.Config.map(config =>
       Container([
-        Paragraph({}, ['⚠️ In construction ⚠️']),
-        Paragraph({}, ['Welcome to my stuff']),
-        Paragraph({}, [
+        Paragraph({}, '⚠️ In construction ⚠️'),
+        Paragraph({}, 'Welcome to my stuff'),
+        Paragraph(
+          {},
           'This is my playground ... and there is stuff to read too.',
-        ]),
+        ),
         h('a', { attrs: { href: '/posts' } }, 'My posts'),
-        Paragraph({}, [
+        Paragraph(
+          {},
           `I'm primarly building this to play around with streams and just
           (reactive?) functional programming in general`,
-        ]),
-        Paragraph({}, ['My resume will be here soon too']),
-        Paragraph({}, [`Here's some info dump for now:`]),
+        ),
+        Paragraph({}, 'My resume will be here soon too'),
+        Paragraph({}, `Here's some info dump for now:`),
         h('ul', [
           h('li', [
             'Email: ',

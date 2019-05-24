@@ -27,6 +27,7 @@
 
 .sub {
   composes: centeredContent from '../styles/alignment.css';
+  composes: container from './Container.css';
 }
 
 .navigationLinks {

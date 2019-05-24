@@ -54,6 +54,7 @@
     "normalize.css": "^8.0.0",
     "path-to-regexp": "^3.0.0",
     "ramda": "^0.26.0",
+    "snabbdom": "^0.7.3",
     "xstream": "^11.7.0"
   },
   "prettier": {

@@ -1,11 +1,11 @@
-import { VNode, h } from '@cycle/dom';
+import { h } from '@cycle/dom';
 
 interface Props {
   timestamp: number;
   format?: 'simple';
 }
 
-function Date_({ timestamp, format }: Props): VNode {
+function Date_({ timestamp, format }: Props) {
   const date = new Date(timestamp);
   return h(
     'span',

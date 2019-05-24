@@ -1,8 +1,9 @@
-import { VNode, h } from '@cycle/dom';
+import { h } from '@cycle/dom';
+import { VNodeChildren } from 'snabbdom/h';
 
 import styles from './Container.css';
 
-function Container(children: Array<VNode | string> | undefined) {
+function Container(children: VNodeChildren) {
   return h(
     'div',
     {
