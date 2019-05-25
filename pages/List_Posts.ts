@@ -9,7 +9,7 @@ import posts from '../posts';
 export default function List_Posts(sources: PageSources) {
   const hasPosts = posts.length !== 0;
   return {
-    DOM: sources.History.map(({ pathname }) =>
+    DOM: sources.Params.map(({ pathname }) =>
       Container([
         hasPosts
           ? h('h2', 'Posts:')
