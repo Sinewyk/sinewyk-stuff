@@ -15,7 +15,7 @@ export default function List_Posts(sources: PageSources) {
           ? h('h2', 'Posts:')
           : h('div', [
               h('h2', `No posts yet :'(`),
-              Paragraph({}, ['They are coming though !']),
+              Paragraph('They are coming though !'),
             ]),
         h(
           'ul',

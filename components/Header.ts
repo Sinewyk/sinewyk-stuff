@@ -1,7 +1,6 @@
 import { h } from '@cycle/dom';
 import { Sources } from '../src/interfaces';
 import { Container } from './Container';
-import { Paragraph } from './Paragraph';
 import { back } from '../src/back';
 
 import styles from './Header.css';
@@ -27,7 +26,11 @@ export default function Header(sources: Sources) {
               {
                 attrs: { class: `${styles.sub}` },
               },
-              Paragraph({ className: styles.name }, `Serge 'Sinewyk' Havas`),
+              h(
+                'p',
+                { attrs: { class: styles.name } },
+                `Serge 'Sinewyk' Havas`,
+              ),
             ),
           ])
         : h('header', [
