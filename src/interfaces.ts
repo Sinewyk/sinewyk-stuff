@@ -32,8 +32,13 @@ export type PageSources = Sources & {
 };
 
 export type Sinks = Partial<RootSinks>;
-export interface Component {
+
+export interface WrappedComponent {
   (s: Sources): Sinks;
+}
+
+export interface Component {
+  (s: PageSources): Sinks;
 }
 
 export interface Route {

@@ -1,7 +1,7 @@
 import * as pathToRegexp from 'path-to-regexp';
 import xs from 'xstream';
-import { Sources, Component, Route } from '../src/interfaces';
-
+import concat from 'xstream/extra/concat';
+import { Sources, Route, WrappedComponent } from '../src/interfaces';
 /**
  * Stole most of this from react-router matchPath
  */
@@ -90,19 +90,23 @@ const matchPath = (
 export function route(
   pathname: string,
   routes: Route[],
-  defaultComponent: Component,
-): Component {
-  return routes.reduce((_, value) => {
+  defaultComponent: WrappedComponent,
+): WrappedComponent {
+  return routes.reduce((_, route) => {
     if (_ !== defaultComponent) {
       return _;
     }
-    const didMatch = matchPath(pathname, value.path);
-    return didMatch
-      ? (sources: Sources) =>
-          value.value({
-            Params: xs.of(didMatch.params),
-            ...sources,
-          })
-      : defaultComponent;
+    const didMatch = matchPath(pathname, route.path);
+    if (didMatch) {
+      return (sources: Sources) =>
+        route.value({
+          Params: concat(
+            xs.of({ ...didMatch.params, pathname }),
+            xs.never(),
+          ).remember(),
+          ...sources,
+        });
+    }
+    return defaultComponent;
   }, defaultComponent);
 }
