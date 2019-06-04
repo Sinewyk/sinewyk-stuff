@@ -1,5 +1,5 @@
 import { h } from '@cycle/dom';
-import { PageSources, Post } from '../src/interfaces';
+import { PageSources } from '../src/interfaces';
 import posts from '../posts';
 import { Container } from './Container';
 import NotFound from './NotFound';

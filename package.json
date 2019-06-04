@@ -12,12 +12,16 @@
     "test:dev": "cypress open",
     "test": "cypress run",
     "ci": "start-server-and-test serve:test http://localhost:8000 test",
-    "watch": "webpack-dev-server --hot --config=./webpack.dev"
+    "watch": "cross-env NODE_ENV=development webpack-dev-server --hot --config=./webpack.dev"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-typescript": "^7.3.3",
     "@types/history": "^4.6.1",
     "@types/node": "^10.10.3",
     "autoprefixer": "^9.4.2",
+    "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "compression-webpack-plugin": "^2.0.0",
     "cross-env": "^5.0.5",
@@ -38,7 +42,6 @@
     "serve": "10.1.1",
     "start-server-and-test": "^1.7.1",
     "style-loader": "^0.23.0",
-    "ts-loader": "^6.0.0",
     "typescript": "~3.5.0",
     "url-loader": "^1.1.1",
     "webpack": "^4.16.3",
@@ -61,5 +64,15 @@
     "singleQuote": true,
     "semi": true,
     "trailingComma": "all"
+  },
+  "browserslist": {
+    "production": [
+      "> 1%",
+      "ie 11"
+    ],
+    "development": [
+      "last 1 firefox version",
+      "last 1 chrome version"
+    ]
   }
 }
