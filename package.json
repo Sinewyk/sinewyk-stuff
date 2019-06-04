@@ -67,8 +67,7 @@
   },
   "browserslist": {
     "production": [
-      "> 1%",
-      "ie 11"
+      "> 1%"
     ],
     "development": [
       "last 1 firefox version",
