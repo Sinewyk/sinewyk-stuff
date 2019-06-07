@@ -7,11 +7,11 @@
     "analyse": "yarn build && webpack-bundle-analyzer dist/stats.json",
     "analyze": "yarn analyse",
     "serve": "serve dist --listen=8000 --single",
-    "serve:test": "yarn build:test && serve dist --listen=8000 --single",
     "format": "prettier --write --list-different \"./**/*.{ts,js,json,md,css}\"",
     "test:dev": "cypress open",
-    "test": "cypress run",
-    "ci": "start-server-and-test serve:test http://localhost:8000 test",
+    "test": "yarn test:unit && yarn build:test && start-server-and-test serve http://localhost:8000 test:functional",
+    "test:unit": "yarn format && tsc",
+    "test:functional": "cypress run",
     "watch": "cross-env NODE_ENV=development webpack-dev-server --hot --config=./webpack.dev"
   },
   "devDependencies": {
