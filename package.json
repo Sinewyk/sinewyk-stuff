@@ -25,7 +25,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "compression-webpack-plugin": "3.0.0",
     "cross-env": "^5.0.5",
-    "css-loader": "^2.0.1",
+    "css-loader": "^3.0.0",
     "cssnano": "^4.1.7",
     "cycle-restart": "^0.2.2",
     "cypress": "^3.1.0",
