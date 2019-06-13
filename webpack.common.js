@@ -38,9 +38,6 @@ module.exports = {
         use: [
           {
             loader: './scripts/gitMetaLoader',
-            options: {
-              foo: 'bar',
-            },
           },
           {
             loader: 'html-loader',
