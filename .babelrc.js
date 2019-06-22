@@ -1,4 +1,3 @@
-const isProd = process.env.NODE_ENV === 'production';
 const isTesting = process.env.TESTING === 'true';
 
 module.exports = {
@@ -11,5 +10,8 @@ module.exports = {
     ],
     '@babel/preset-typescript',
   ],
-  plugins: ['@babel/plugin-syntax-dynamic-import'],
+  plugins: [
+    '@babel/plugin-syntax-dynamic-import',
+    'babel-plugin-transform-inline-environment-variables',
+  ],
 };

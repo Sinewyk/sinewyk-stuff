@@ -43,16 +43,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    ...commonConf.plugins,
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('development'),
-      },
-      __LAST_BUILD_TIME__: Date.now(),
-    }),
-    new webpack.NamedModulesPlugin(),
-  ],
+  plugins: [...commonConf.plugins, new webpack.NamedModulesPlugin()],
   devServer: {
     contentBase: './dist',
     port: 8000,

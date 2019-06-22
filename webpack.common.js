@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -17,6 +18,9 @@ module.exports = {
       description:
         'Where I create and talk about stuff, my personal playground',
       template: 'public/index.ejs',
+    }),
+    new webpack.DefinePlugin({
+      __LAST_BUILD_TIME__: Date.now(),
     }),
   ],
   module: {

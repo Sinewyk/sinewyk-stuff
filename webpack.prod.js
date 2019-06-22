@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const commonConf = require('./webpack.common');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
@@ -86,12 +85,6 @@ module.exports = {
       // both options are optional
       filename: '[name].[contenthash].css',
       chunkFilename: '[id].[contenthash].css',
-    }),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production'),
-      },
-      __LAST_BUILD_TIME__: Date.now(),
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'disabled',
