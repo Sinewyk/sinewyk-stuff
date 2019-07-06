@@ -41,11 +41,12 @@ module.exports = {
             options: {
               sourceMap: true,
               importLoaders: 1,
-              modules: true,
-              // When testing, keep css name so that we can ... test ?
-              localIdentName: process.env.TESTING
-                ? '[path]_[name]_[local]'
-                : '[hash:base64]',
+              modules: {
+                // When testing, keep css name so that we can ... test ?
+                localIdentName: process.env.TESTING
+                  ? '[path]_[name]_[local]'
+                  : '[hash:base64]',
+              },
             },
           },
           {

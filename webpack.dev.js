@@ -20,10 +20,11 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              sourceMap: true,
               importLoaders: 1,
-              modules: true,
-              localIdentName: '[path]_[name]_[local]',
+              sourceMap: true,
+              modules: {
+                localIdentName: '[path]_[name]_[local]',
+              },
             },
           },
           {
