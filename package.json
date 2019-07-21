@@ -44,7 +44,7 @@
     "serve": "10.1.1",
     "start-server-and-test": "^1.7.1",
     "style-loader": "^0.23.0",
-    "typescript": "~3.5.0",
+    "typescript": "~3.5.3",
     "url-loader": "2.1.0",
     "webpack": "^4.36.1",
     "webpack-bundle-analyzer": "^3.0.2",
