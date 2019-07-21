@@ -44,7 +44,7 @@ module.exports = {
               modules: {
                 // When testing, keep css name so that we can ... test ?
                 localIdentName: process.env.TESTING
-                  ? '[path]_[name]_[local]'
+                  ? '[path][name]__[local]'
                   : '[hash:base64]',
               },
             },
