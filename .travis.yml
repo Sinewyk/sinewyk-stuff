@@ -3,3 +3,7 @@ node_js:
   - stable
 script: 'yarn test'
 cache: yarn
+addons:
+  apt:
+    packages:
+    - libgconf-2-4
