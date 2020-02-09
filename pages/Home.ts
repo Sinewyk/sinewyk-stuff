@@ -20,7 +20,13 @@ export default function Home(sources: Sources) {
           h('li', [
             h(
               'a',
-              { attrs: { href: '/resume.html', target: '_blank' } },
+              {
+                attrs: {
+                  href: '/resume.html',
+                  target: '_blank',
+                  rel: 'noreferrer',
+                },
+              },
               'My resume/CV',
             ),
           ]),
@@ -28,7 +34,13 @@ export default function Home(sources: Sources) {
             'Email: ',
             h(
               'a',
-              { attrs: { target: '_blank', href: `mailto:${config.email}` } },
+              {
+                attrs: {
+                  href: `mailto:${config.email}`,
+                  target: '_blank',
+                  rel: 'noreferrer',
+                },
+              },
               config.email,
             ),
           ]),
@@ -36,7 +48,13 @@ export default function Home(sources: Sources) {
             'Twitter: ',
             h(
               'a',
-              { attrs: { target: '_blank', href: config.twitter } },
+              {
+                attrs: {
+                  href: config.twitter,
+                  target: '_blank',
+                  rel: 'noreferrer',
+                },
+              },
               `@${config.pseudo}`,
             ),
           ]),
@@ -44,7 +62,13 @@ export default function Home(sources: Sources) {
             'Github: ',
             h(
               'a',
-              { attrs: { target: '_blank', href: config.github } },
+              {
+                attrs: {
+                  href: config.github,
+                  target: '_blank',
+                  rel: 'noreferrer',
+                },
+              },
               config.pseudo,
             ),
           ]),

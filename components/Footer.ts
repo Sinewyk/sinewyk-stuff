@@ -38,8 +38,9 @@ export default function Footer(sources: Sources) {
                 {
                   attrs: {
                     class: styles.link,
-                    target: '_blank',
                     href: config.git_repository,
+                    target: '_blank',
+                    rel: 'noreferrer',
                   },
                 },
                 'Source code',
