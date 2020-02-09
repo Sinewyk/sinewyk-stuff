@@ -3,6 +3,7 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -19,6 +20,7 @@ module.exports = {
         'Where I create and talk about stuff, my personal playground',
       template: 'public/index.ejs',
     }),
+    new CopyWebpackPlugin([{ from: 'static', to: '' }]),
     new webpack.DefinePlugin({
       __LAST_BUILD_TIME__: Date.now(),
     }),
