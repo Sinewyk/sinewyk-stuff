@@ -15,9 +15,15 @@ export default function Home(sources: Sources) {
           `I'm primarly building this to play around with streams and just
           (reactive?) functional programming in general`,
         ),
-        Paragraph('My resume will be here soon too'),
-        Paragraph(`Here's some info dump for now:`),
+        Paragraph(`Here's some info:`),
         h('ul', [
+          h('li', [
+            h(
+              'a',
+              { attrs: { href: '/resume.html', target: '_blank' } },
+              'My resume/CV',
+            ),
+          ]),
           h('li', [
             'Email: ',
             h(
