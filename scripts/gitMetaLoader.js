@@ -7,20 +7,9 @@ const filter_empty_string = R.filter(x => x !== '');
 const parse_int_10 = int => parseInt(int, 10);
 const multiply_by_1000 = x => x * 1000;
 
-const get_first_js_timestamp = R.pipe(
-  R.head,
-  parse_int_10,
-  multiply_by_1000,
-);
-const get_last_js_timestamp = R.pipe(
-  R.tail,
-  parse_int_10,
-  multiply_by_1000,
-);
-const get_timestamp_array = R.pipe(
-  split_new_line,
-  filter_empty_string,
-);
+const get_first_js_timestamp = R.pipe(R.head, parse_int_10, multiply_by_1000);
+const get_last_js_timestamp = R.pipe(R.tail, parse_int_10, multiply_by_1000);
+const get_timestamp_array = R.pipe(split_new_line, filter_empty_string);
 
 module.exports = function(code) {
   const callback = this.async();
