@@ -1,11 +1,11 @@
 @media (min-width: 600px) {
-  .container {
-    max-width: 600px;
-  }
+	.container {
+		max-width: 600px;
+	}
 }
 
 .container {
-  composes: centered from '../styles/alignment.css';
-  padding-left: 15px;
-  padding-right: 15px;
+	composes: centered from '../styles/alignment.css';
+	padding-left: 15px;
+	padding-right: 15px;
 }

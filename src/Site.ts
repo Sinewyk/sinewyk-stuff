@@ -12,38 +12,36 @@ import Post from '../components/Post';
 import Home from '../pages/Home';
 
 const routes: Route[] = [
-  { path: '/', value: Home },
-  { path: '/posts', value: List_Posts },
-  { path: '/posts/:slug', value: Post },
+	{ path: '/', value: Home },
+	{ path: '/posts', value: List_Posts },
+	{ path: '/posts/:slug', value: Post },
 ];
 
 function Site(sources: Sources) {
-  const footer = Footer(sources);
-  const header = Header(sources);
+	const footer = Footer(sources);
+	const header = Header(sources);
 
-  const pageSinks$ = sources.History.map((location: Location) => {
-    const { pathname } = location;
+	const pageSinks$ = sources.History.map((location: Location) => {
+		const { pathname } = location;
 
-    const pageFactory = route(pathname, routes, () => ({
-      DOM: xs.of(NotFound()),
-    }));
+		const pageFactory = route(pathname, routes, () => ({
+			DOM: xs.of(NotFound()),
+		}));
 
-    const page = pageFactory(sources);
+		const page = pageFactory(sources);
 
-    return {
-      DOM: page.DOM!,
-    };
-  });
+		return {
+			DOM: page.DOM!,
+		};
+	});
 
-  const pageSinks = extractSinks(pageSinks$, ['DOM']);
+	const pageSinks = extractSinks(pageSinks$, ['DOM']);
 
-  return {
-    DOM: xs
-      .combine(header.DOM, pageSinks.DOM, footer.DOM)
-      .map(([headerDOM, pageDOM, footerDOM]) =>
-        h('div', [headerDOM, pageDOM, footerDOM]),
-      ),
-  };
+	return {
+		DOM: xs
+			.combine(header.DOM, pageSinks.DOM, footer.DOM)
+			.map(([headerDOM, pageDOM, footerDOM]) => h('div', [headerDOM, pageDOM, footerDOM])),
+	};
 }
 
 export default Site;

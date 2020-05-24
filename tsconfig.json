@@ -1,16 +1,16 @@
 {
-  "compilerOptions": {
-    "noEmit": true, // leave it to babel
+	"compilerOptions": {
+		"noEmit": true, // leave it to babel
 
-    "strict": true, // if we are going types, be strict
+		"strict": true, // if we are going types, be strict
 
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
 
-    "moduleResolution": "node", // classic if fucked up
+		"moduleResolution": "node", // classic if fucked up
 
-    "isolatedModules": true // Warn if potential break related to babel unhandled cases
-  }
+		"isolatedModules": true // Warn if potential break related to babel unhandled cases
+	}
 }

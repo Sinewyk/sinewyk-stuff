@@ -2,24 +2,24 @@
 
 :global html,
 :global body {
-  height: 100%;
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
+	height: 100%;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
 }
 
 :global html {
-  font-size: 18px;
-  box-sizing: border-box; /* box-model stuff */
+	font-size: 18px;
+	box-sizing: border-box; /* box-model stuff */
 }
 
 :global *,
 :global *:before,
 :global *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 :global body {
-  font-family: Tahoma, Verdana, Arial, sans-serif;
-  background-color: white;
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	background-color: white;
 }
