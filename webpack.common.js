@@ -19,7 +19,7 @@ module.exports = {
 			description: 'Where I create and talk about stuff, my personal playground',
 			template: 'public/index.ejs',
 		}),
-		new CopyWebpackPlugin([{ from: 'static', to: '' }]),
+		new CopyWebpackPlugin({ patterns: [{ from: 'static', to: '' }] }),
 		new webpack.DefinePlugin({
 			__LAST_BUILD_TIME__: Date.now(),
 		}),
@@ -47,7 +47,7 @@ module.exports = {
 					{
 						loader: 'html-loader',
 						options: {
-							exportAsEs6Default: true,
+							esModule: true,
 						},
 					},
 					'markdown-loader',
