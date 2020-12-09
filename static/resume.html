@@ -1,367 +1,374 @@
 <!DOCTYPE html>
 <html>
-  <!--
+	<!--
     Say what you want ...
     sometimes it's still pretty cool to just build something
     with no intermediate tooling and/or libraries 👍👍
   -->
-  <head>
-    <meta charset="UTF-8" />
-    <title>Serge Havas - Web Developer</title>
-    <meta name="description" content="Serge Havas resume" />
-    <meta name="author" content="Serge 'Sinewyk' Havas" />
-    <meta name="keywords" content="Serge Havas,resume,sinewyk,cv" />
-    <meta name="referrer" content="no-referrer" />
-    <meta name="viewport" content="width=device-width" />
-    <style>
-      /* global */
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+	<head>
+		<meta charset="UTF-8" />
+		<title>Serge Havas - Web Developer</title>
+		<meta name="description" content="Serge Havas resume" />
+		<meta name="author" content="Serge 'Sinewyk' Havas" />
+		<meta name="keywords" content="Serge Havas,resume,sinewyk,cv" />
+		<meta name="referrer" content="no-referrer" />
+		<meta name="viewport" content="width=device-width" />
+		<style>
+			/* global */
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
 
-      :root {
-        --notable-background: #fafafa;
-        --graybar-color: #ddd;
-      }
+			:root {
+				--notable-background: #fafafa;
+				--graybar-color: #ddd;
+			}
 
-      /* main stuff */
-      body {
-        max-width: 900px;
-        margin: 0 auto;
-      }
+			/* main stuff */
+			body {
+				max-width: 900px;
+				margin: 0 auto;
+			}
 
-      li {
-        list-style: none;
-      }
+			li {
+				list-style: none;
+			}
 
-      .resume {
-        position: relative;
-        background-color: var(--notable-background);
-        padding: 24px;
-      }
+			.resume {
+				position: relative;
+				background-color: var(--notable-background);
+				padding: 24px;
+			}
 
-      header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 24px;
-      }
+			header {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-bottom: 24px;
+			}
 
-      hr {
-        background: black;
-        margin-bottom: 12px;
-      }
+			hr {
+				background: black;
+				margin-bottom: 12px;
+			}
 
-      .labels span {
-        display: inline-block;
-        background-color: black;
-        color: white;
-        opacity: 0.6;
-        margin-right: 6px;
-        padding: 1px 5px;
-        border-radius: 4px;
-      }
+			.labels span {
+				display: inline-block;
+				background-color: black;
+				color: white;
+				opacity: 0.6;
+				margin-right: 6px;
+				padding: 1px 5px;
+				border-radius: 4px;
+			}
 
-      .intro {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 24px;
-      }
+			.intro {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 24px;
+			}
 
-      .intro div:first-child {
-        margin-right: 24px;
-      }
+			.intro div:first-child {
+				margin-right: 24px;
+			}
 
-      p {
-        margin-bottom: 6px;
-      }
+			p {
+				margin-bottom: 6px;
+			}
 
-      .skills {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 24px;
-      }
+			.skills {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 24px;
+			}
 
-      .skills ul:first-child {
-        margin-right: 12px;
-      }
+			.skills ul:first-child {
+				margin-right: 12px;
+			}
 
-      .exp {
-        display: flex;
-        align-items: stretch;
-      }
+			.exp {
+				display: flex;
+				align-items: stretch;
+			}
 
-      .exp-meta {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        font-family: monospace;
-        background: linear-gradient(
-          180deg,
-          var(--notable-background),
-          var(--graybar-color),
-          var(--notable-background)
-        );
-        padding: 12px;
-        white-space: nowrap;
-      }
+			.exp-meta {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				font-family: monospace;
+				background: linear-gradient(
+					180deg,
+					var(--notable-background),
+					var(--graybar-color),
+					var(--notable-background)
+				);
+				padding: 12px;
+				white-space: nowrap;
+			}
 
-      .exp-content {
-        padding: 12px;
-        flex-grow: 1;
-      }
+			.exp-content {
+				padding: 12px;
+				flex-grow: 1;
+			}
 
-      .pdf-link:hover {
-        border-color: white;
-      }
+			.pdf-link:hover {
+				border-color: white;
+			}
 
-      .pdf-link {
-        position: absolute;
-        right: 24px;
-        width: 48px;
-        height: 48px;
-        background-image: url(pdf.svg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 30px;
-        border: 1px solid #eee;
-        border-top-color: rgb(238, 238, 238);
-        border-right-color: rgb(238, 238, 238);
-        border-bottom-color: rgb(238, 238, 238);
-        border-left-color: rgb(238, 238, 238);
-        border-radius: 50%;
-        color: transparent;
-      }
+			.pdf-link {
+				position: absolute;
+				right: 24px;
+				width: 48px;
+				height: 48px;
+				background-image: url(pdf.svg);
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: 30px;
+				border: 1px solid #eee;
+				border-top-color: rgb(238, 238, 238);
+				border-right-color: rgb(238, 238, 238);
+				border-bottom-color: rgb(238, 238, 238);
+				border-left-color: rgb(238, 238, 238);
+				border-radius: 50%;
+				color: transparent;
+			}
 
-      @media print {
-        :root {
-          --notable-background: white;
-          --graybar-color: #eee;
-        }
-        a,
-        a:visited {
-          color: inherit;
-          text-decoration: none;
-        }
+			@media print {
+				:root {
+					--notable-background: white;
+					--graybar-color: #eee;
+				}
+				a,
+				a:visited {
+					color: inherit;
+					text-decoration: none;
+				}
 
-        .pdf-link {
-          display: none;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="resume">
-      <a class="pdf-link" href="./Serge Havas - Resume.pdf">PDF</a>
+				.pdf-link {
+					display: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="resume">
+			<a class="pdf-link" href="./Serge Havas - Resume.pdf">PDF</a>
 
-      <header>
-        <h1>Serge Havas</h1>
-        <h2>Web Developer</h2>
-        <h3>19/04/1990</h3>
-      </header>
+			<header>
+				<h1>Serge Havas</h1>
+				<h2>Web Developer</h2>
+				<h3>19/04/1990</h3>
+			</header>
 
-      <hr />
+			<hr />
 
-      <section class="intro">
-        <div>
-          <div>
-            Email:
-            <a href="mailto:sergehavas@gmail.com">sergehavas@gmail.com</a>
-          </div>
-          <div>
-            Address: Maurepas, France
-          </div>
-          <div>Driving license (Permis B)</div>
-        </div>
-        <div>
-          <ul>
-            <li>
-              LinkedIn:
-              <a href="https://www.linkedin.com/in/serge-havas-09196154/"
-                >linkedin.com/in/serge-havas-09196154</a
-              >
-            </li>
-            <li>
-              Github:
-              <a href="https://github.com/sinewyk">github.com/sinewyk</a>
-            </li>
-            <li>
-              Twitter:
-              <a href="https://twitter.com/sinewyk">twitter.com/sinewyk</a>
-            </li>
-            <li>
-              Personal:
-              <a href="https://sinewyk.com">sinewyk.com</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="personal">
-        <p>
-          I'm a developer. Attach me a fancy title "core lead", "senior",
-          whatever and I will still dev, because it's what I love.
-        </p>
-        <p>
-          I would like remote options, preferably fully remote (if possible I
-          will go on-site at the beginning to know my colleagues).
-        </p>
-      </section>
-      <hr />
+			<section class="intro">
+				<div>
+					<div>
+						Email:
+						<a href="mailto:sergehavas@gmail.com">sergehavas@gmail.com</a>
+					</div>
+					<div>
+						Address: Maurepas, France
+					</div>
+					<div>Driving license (Permis B)</div>
+				</div>
+				<div>
+					<ul>
+						<li>
+							LinkedIn:
+							<a href="https://www.linkedin.com/in/serge-havas-09196154/"
+								>linkedin.com/in/serge-havas-09196154</a
+							>
+						</li>
+						<li>
+							Github:
+							<a href="https://github.com/sinewyk">github.com/sinewyk</a>
+						</li>
+						<li>
+							Twitter:
+							<a href="https://twitter.com/sinewyk">twitter.com/sinewyk</a>
+						</li>
+						<li>
+							Personal:
+							<a href="https://sinewyk.com">sinewyk.com</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="personal">
+				<p>I'm a software developer/engineer. I love it.</p>
+				<p>
+					I also like teaching/mentoring, did quite a lot of it in previous jobs, so I would like to
+					try it full time in the future.
+				</p>
+			</section>
+			<hr />
 
-      <h2>Skills</h2>
+			<h2>Skills</h2>
 
-      <section class="skills">
-        <ul>
-          <li>
-            Spoken languages: French (native), English (excellent)
-          </li>
-          <li>GNU/Linux, Windows, OS X (but please don't), bash, docker</li>
-          <li>Versioning: Git, SVN</li>
-          <li>SQL: PostgreSQL, Mysql | noSQL: Mongo (but please don't)</li>
-        </ul>
-        <ul>
-          <li>
-            Javascript (Typescript, Nodejs), PHP, HTML, CSS (less, sass)
-          </li>
-          <li>Learning Rust ❤️</li>
-          <li>Libraries: React, Redux, Ramda, Jest ...</li>
-          <li>Tools: Webpack, Prettier ...</li>
-          <li></li>
-        </ul>
-      </section>
-      <hr />
+			<section class="skills">
+				<ul>
+					<li>
+						Spoken languages: French (native), English (excellent)
+					</li>
+					<li>GNU/Linux, Windows, OS X, bash, docker</li>
+					<li>Versioning: Git, SVN</li>
+					<li>SQL: PostgreSQL, Mysql | noSQL: Mongo</li>
+				</ul>
+				<ul>
+					<li>
+						Javascript (Typescript, Nodejs), PHP, HTML, CSS (less, sass)
+					</li>
+					<li>Learning Rust ❤️</li>
+					<li>Libraries: React, Redux, Ramda, Jest ...</li>
+					<li>Tools: Webpack, Prettier ...</li>
+					<li></li>
+				</ul>
+			</section>
+			<hr />
 
-      <h2>Experiences</h2>
+			<h2>Experiences</h2>
 
-      <section class="experiences">
-        <div class="exp">
-          <div class="exp-meta">
-            <p>Sep 2019</p>
-            <p>Aug 2013</p>
-          </div>
-          <div class="exp-content">
-            <h4>
-              Fullstack Web Developer, <i>La Ruche qui dit Oui!</i>, Paris
-            </h4>
-            <p class="labels">
-              <span>PHP</span><span>Symfony 2</span><span>Doctrine</span
-              ><span>PostgreSQL</span><span>Javascript</span><span>React</span
-              ><span>Redux</span>
-            </p>
-            <p><u>Achievements and responsabilities:</u></p>
-            <p>
-              I wrote an ETL process by hand in PHP for v2 => v3 MySQL to
-              PostgreSQL migration ... it "only" had 1 bug, I fixed it later.
-            </p>
-            <p>
-              Core duties: dependencies management, tooling, onboarding,
-              internal technical roadmap handling
-            </p>
-            <p>
-              Technical lead for the later part of my employment.
-            </p>
-            <p>
-              Testing: we went from no tests, to unit testing and phantomjs, to
-              selenium and Jest testing
-            </p>
-            <p>
-              During two major incidents, I personally ensured going back to
-              green status by refactoring internal messaging and sales page
-              because of unprecedented user growth.
-            </p>
-          </div>
-        </div>
+			<section class="experiences">
+				<div class="exp">
+					<div class="exp-meta">
+						<p>Jun 2020</p>
+						<p>Mar 2020</p>
+					</div>
+					<div class="exp-content">
+						<h4>Fullstack Web Developer, <i>Ma Salle de Sport</i>, Paris</h4>
+						<p class="labels">
+							<span>NodeJS</span><span>MySQL</span><span>Javascript</span><span>React</span>
+						</p>
+						<p>
+							MySQL major migration, utf8_mb4 handling
+						</p>
+						<p>
+							Nodejs job server, automatic deployment for aws
+						</p>
+						<p>
+							3 weeks after I started, all gyms (which were our clients) closed due to Covid-19 😅
+						</p>
+					</div>
+				</div>
 
-        <div class="exp">
-          <div class="exp-meta">
-            <p>Aug 2013</p>
-            <p>Feb 2013</p>
-          </div>
-          <div class="exp-content">
-            <h4>Internship, <i>La Ruche qui dit Oui!</i>, Paris</h4>
-            <p class="labels">
-              <span>PHP</span><span>Symfony 1.4</span><span>Javascript</span
-              ><span>MySQL</span>
-            </p>
-            <p>
-              Maintenance of the previous version while another team was
-              starting the rewrite of the v3.
-            </p>
-          </div>
-        </div>
+				<div class="exp">
+					<div class="exp-meta">
+						<p>Sep 2019</p>
+						<p>Aug 2013</p>
+					</div>
+					<div class="exp-content">
+						<h4>Fullstack Web Developer, <i>La Ruche qui dit Oui!</i>, Paris</h4>
+						<p class="labels">
+							<span>PHP</span><span>Symfony 2</span><span>Doctrine</span><span>PostgreSQL</span
+							><span>Javascript</span><span>React</span><span>Redux</span>
+						</p>
+						<p><u>Achievements and responsabilities:</u></p>
+						<p>
+							I wrote an ETL process by hand in PHP for v2 => v3 MySQL to PostgreSQL migration ...
+							it "only" had 1 bug, I fixed it later.
+						</p>
+						<p>
+							Core duties: dependencies management, tooling, onboarding, internal technical roadmap
+							handling
+						</p>
+						<p>
+							Technical lead for the later part of my employment.
+						</p>
+						<p>
+							Testing: we went from no tests, to unit testing and phantomjs, to selenium and Jest
+							testing
+						</p>
+						<p>
+							During two major incidents, I personally ensured going back to green status by
+							refactoring internal messaging and sales page because of unprecedented user growth.
+						</p>
+					</div>
+				</div>
 
-        <!--CURRENT BREAK PAGE IS HERE
+				<!--CURRENT BREAK PAGE IS HERE
           MOVE IT WHEN EDITING PDF TO BREAK "PROPERLY"-->
 
-        <!--<div style="break-before: page;"></div>-->
+				<!--<div style="break-before: page;"></div>-->
 
-        <div class="exp">
-          <div class="exp-meta">
-            <p>Jul 2012</p>
-            <p>Apr 2012</p>
-          </div>
-          <div class="exp-content">
-            <h4>Internship, <i>Hop-Cube</i>, Paris</h4>
-            <p class="labels">
-              <span>PHP</span><span>Zend</span><span>Javascript</span
-              ><span>MySQL</span>
-            </p>
-            <p>
-              I participated in the realization of the website
-              <a href="http://carlabelling.ademe.fr">carlabelling.ademe.fr</a>
-            </p>
-          </div>
-        </div>
-      </section>
-      <hr />
+				<div class="exp">
+					<div class="exp-meta">
+						<p>Aug 2013</p>
+						<p>Feb 2013</p>
+					</div>
+					<div class="exp-content">
+						<h4>Internship, <i>La Ruche qui dit Oui!</i>, Paris</h4>
+						<p class="labels">
+							<span>PHP</span><span>Symfony 1.4</span><span>Javascript</span><span>MySQL</span>
+						</p>
+						<p>
+							Maintenance of the previous version while another team was starting the rewrite of the
+							v3.
+						</p>
+					</div>
+				</div>
 
-      <h2>Education</h2>
+				<div class="exp">
+					<div class="exp-meta">
+						<p>Jul 2012</p>
+						<p>Apr 2012</p>
+					</div>
+					<div class="exp-content">
+						<h4>Internship, <i>Hop-Cube</i>, Paris</h4>
+						<p class="labels">
+							<span>PHP</span><span>Zend</span><span>Javascript</span><span>MySQL</span>
+						</p>
+						<p>
+							I participated in the realization of the website
+							<a href="http://carlabelling.ademe.fr">carlabelling.ademe.fr</a>
+						</p>
+					</div>
+				</div>
+			</section>
+			<hr />
 
-      <section class="education">
-        <ul>
-          <li>
-            <p>
-              Ecole centrale d'Electronique (2008 – 2013) ⦁ Master's degree,
-              Computer sciences
-            </p>
-          </li>
-          <li>
-            <p>
-              University of California, Irvine (2012) ⦁ International Business
-            </p>
-          </li>
-          <li>
-            <p>
-              Concordia university (2011) ⦁ Mathematics and Computer Science
-            </p>
-          </li>
-        </ul>
-      </section>
-      <hr />
+			<h2>Education</h2>
 
-      <h2>Hobbies</h2>
+			<section class="education">
+				<ul>
+					<li>
+						<p>
+							Ecole centrale d'Electronique (2008 – 2013) ⦁ Master's degree, Computer sciences
+						</p>
+					</li>
+					<li>
+						<p>
+							University of California, Irvine (2012) ⦁ International Business
+						</p>
+					</li>
+					<li>
+						<p>
+							Concordia university (2011) ⦁ Mathematics and Computer Science
+						</p>
+					</li>
+				</ul>
+			</section>
+			<hr />
 
-      <section class="hobbies">
-        <p>
-          Games, computer sciences/technology, martials arts (Black belt in
-          karatédo and did 3 months of kung-fu in a chinese shaolin temple), DDP
-          Yoga, board games, roleplaying games (D&D). I don't watch TV and the
-          news.
-        </p>
-        <p>
-          Personal playground that is sporadically updated
-          <a href="https://sinewyk.com">sinewyk.com</a>
-        </p>
-      </section>
-      <hr />
+			<h2>Hobbies</h2>
 
-      <h2>References</h2>
+			<section class="hobbies">
+				<p>
+					Games, computer sciences/technology, martials arts (Black belt in karatédo and did 3
+					months of kung-fu in a chinese shaolin temple), DDP Yoga, board games, roleplaying games
+					(D&D).
+				</p>
+			</section>
+			<hr />
 
-      <section class="references">
-        <p>References are available upon request.</p>
-      </section>
-    </div>
-  </body>
+			<h2>References</h2>
+
+			<section class="references">
+				<p>References are available upon request.</p>
+			</section>
+		</div>
+	</body>
 </html>
