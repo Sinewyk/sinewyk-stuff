@@ -73,9 +73,12 @@ module.exports = {
 			test: /\.(jpe?g|png|gif)$/i, // default /\.(jpe?g|png|gif|svg)$/i STOPGAP for pdf.svg not being copied :x
 			imageminOptions: {
 				plugins: [
-					imageminJpegtran({
-						progressive: true,
-					}),
+					[
+						'jpegtran',
+						{
+							progressive: true,
+						},
+					],
 				],
 			},
 		}),
