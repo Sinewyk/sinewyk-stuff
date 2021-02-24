@@ -27,12 +27,8 @@ module.exports = {
 					{
 						loader: 'postcss-loader',
 						options: {
-							sourceMap: true,
-							config: {
-								ctx: {
-									autoprefixer: {},
-									cssnano: {},
-								},
+							postcssOptions: {
+								plugins: [],
 							},
 						},
 					},
@@ -41,7 +37,6 @@ module.exports = {
 			},
 		],
 	},
-	plugins: [...commonConf.plugins, new webpack.NamedModulesPlugin()],
 	devServer: {
 		contentBase: './dist',
 		port: 8000,

@@ -3,7 +3,6 @@ const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageminPlugin = require('imagemin-webpack');
-const imageminJpegtran = require('imagemin-jpegtran');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
@@ -11,18 +10,15 @@ module.exports = {
 	mode: 'production',
 	devtool: 'source-map',
 	output: {
+		...commonConf.output,
 		filename: '[name].[contenthash].js',
-		publicPath: '/',
 	},
 	profile: true,
 	optimization: {
+		minimize: true,
 		minimizer: [
 			new TerserPlugin({
-				cache: true,
-				parallel: true,
 				extractComments: true,
-				sourceMap: true,
-				warningsFilter: () => true,
 			}),
 		],
 	},
@@ -49,16 +45,23 @@ module.exports = {
 					{
 						loader: 'postcss-loader',
 						options: {
-							sourceMap: true,
-							config: {
-								ctx: {
-									autoprefixer: {},
-									cssnano: {
-										discardComments: {
-											removeAll: true,
+							postcssOptions: {
+								plugins: [
+									'autoprefixer',
+									[
+										'cssnano',
+										{
+											preset: [
+												'default',
+												{
+													discardComments: {
+														removeAll: true,
+													},
+												},
+											],
 										},
-									},
-								},
+									],
+								],
 							},
 						},
 					},

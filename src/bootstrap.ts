@@ -2,7 +2,7 @@ import xs from 'xstream';
 import { setup, run } from '@cycle/run';
 import { makeDOMDriver } from '@cycle/dom';
 import { captureClicks, makeHistoryDriver } from '@cycle/history';
-import app from '../src/app';
+import app from './app';
 
 const makeConfigDriver = () =>
 	xs.of({

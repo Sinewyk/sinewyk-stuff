@@ -1,16 +1,24 @@
 const webpack = require('webpack');
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+class MyCleanPlugin {
+	apply(compiler) {
+		compiler.hooks.compilation.tap('Clean', (compilation) => {
+			fs.rmdirSync(compilation.options.output.path, { recursive: true });
+		});
+	}
+}
+
 module.exports = {
 	entry: {
-		app: './public/bootstrap.ts',
+		app: './src/bootstrap.ts',
 	},
 	plugins: [
-		new CleanWebpackPlugin(),
+		new MyCleanPlugin(),
 		new FaviconsWebpackPlugin('./public/reflect_cropped.jpg'),
 		new HtmlWebpackPlugin({
 			title: "Sinewyk's Stuff",
@@ -22,6 +30,12 @@ module.exports = {
 		new CopyWebpackPlugin({ patterns: [{ from: 'static', to: '' }] }),
 		new webpack.DefinePlugin({
 			__LAST_BUILD_TIME__: Date.now(),
+			// Dev mode inside @cycle/time or something
+			'process.env': {},
+			// Dev mode inside @cycle/time or something
+			'process.argv': '""',
+			process: {},
+			assert: require('assert'),
 		}),
 	],
 	module: {
