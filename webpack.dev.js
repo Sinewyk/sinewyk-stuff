@@ -4,6 +4,7 @@ const webpack = require('webpack');
 module.exports = {
 	...commonConf,
 	mode: 'development',
+	target: 'web', // default is browserlist (which will be for prod webpack conf)
 	devtool: 'eval',
 	module: {
 		rules: [
