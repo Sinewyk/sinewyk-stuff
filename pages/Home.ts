@@ -16,7 +16,7 @@ export default function Home(sources: Sources) {
           (reactive?) functional programming in general`,
 				),
 				Paragraph(`Here's some info:`),
-				h('ul', [
+				h('ul', { attrs: { class: 'list-disc list-inside' } }, [
 					h('li', [
 						h(
 							'a',

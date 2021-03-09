@@ -1,18 +1,16 @@
 import { h } from '@cycle/dom';
 import { VNodeChildren } from 'snabbdom/h';
 
-import styles from './Paragraph.css';
-
 function Paragraph(children: VNodeChildren) {
 	return h(
 		'p',
 		{
 			attrs: {
-				class: styles.paragraph,
+				class: 'my-4',
 			},
 		},
 		children,
 	);
 }
 
-export { Paragraph, styles };
+export { Paragraph };

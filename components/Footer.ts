@@ -4,8 +4,6 @@ import { Sources } from '../src/interfaces';
 import { Container } from './Container';
 import { Date_ } from './Date';
 
-import styles from './Footer.css';
-
 export default function Footer(sources: Sources) {
 	return {
 		DOM: xs.combine(sources.History, sources.Config).map(([{ pathname }, config]) =>
@@ -13,17 +11,20 @@ export default function Footer(sources: Sources) {
 				'footer',
 				{
 					attrs: {
-						class: styles.root,
+						class: 'text-center bg-gray-200 mt-10 text-gray-500 border-t border-b border-gray-300',
 					},
 				},
 				Container([
 					pathname !== '/'
 						? h(
 								'p',
+								{
+									attrs: { class: 'my-4' },
+								},
 								h(
 									'a',
 									{
-										attrs: { class: styles.link, href: '/' },
+										attrs: { class: 'text-gray-500', href: '/' },
 									},
 									'Home',
 								),
@@ -31,11 +32,14 @@ export default function Footer(sources: Sources) {
 						: '',
 					h(
 						'p',
+						{
+							attrs: { class: 'my-4' },
+						},
 						h(
 							'a',
 							{
 								attrs: {
-									class: styles.link,
+									class: 'text-gray-500',
 									href: config.git_repository,
 									target: '_blank',
 									rel: 'noreferrer',
@@ -46,8 +50,9 @@ export default function Footer(sources: Sources) {
 					),
 					h(
 						'p',
+
 						{
-							attrs: { title: config.last_build_time },
+							attrs: { class: 'my-4', title: config.last_build_time },
 						},
 						['Latest release: ', Date_({ timestamp: config.last_build_time })],
 					),

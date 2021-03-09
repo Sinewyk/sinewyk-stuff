@@ -1,0 +1,33 @@
+@import 'modern-normalize/modern-normalize.css';
+
+@import './my_custom_reset.css';
+
+@import './tailwind.css';
+
+html {
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+.header_gradient {
+	background: linear-gradient(45deg, rgb(76, 199, 127), rgb(235, 58, 58));
+	height: 100px;
+}
+
+.avatar {
+	background-image: url('../public/reflect_cropped.jpg');
+}
+
+.header_photo {
+	height: calc(100vh - 120px);
+	max-height: 400px;
+	background-image: url('../public/header_photo.jpg');
+}
+
+.post p {
+	@apply mt-4 mb-4;
+}
+
+.post blockquote {
+	@apply italic border-l-4 border-gray-400 pl-4 -ml-4 py-0.5;
+}

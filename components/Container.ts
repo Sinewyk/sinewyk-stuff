@@ -1,16 +1,14 @@
 import { h } from '@cycle/dom';
 import { VNodeChildren } from 'snabbdom/h';
 
-import styles from './Container.css';
-
 function Container(children: VNodeChildren) {
 	return h(
 		'div',
 		{
-			attrs: { class: styles.container },
+			attrs: { class: 'px-4 mx-auto sm:max-w-screen-sm' },
 		},
 		children,
 	);
 }
 
-export { Container, styles };
+export { Container };
