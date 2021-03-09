@@ -20,16 +20,13 @@ module.exports = {
 						options: {
 							importLoaders: 1,
 							sourceMap: true,
-							modules: {
-								localIdentName: '[path][name]__[local]',
-							},
 						},
 					},
 					{
 						loader: 'postcss-loader',
 						options: {
 							postcssOptions: {
-								plugins: [],
+								plugins: ['tailwindcss'],
 							},
 						},
 					},

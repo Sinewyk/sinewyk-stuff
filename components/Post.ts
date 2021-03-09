@@ -5,8 +5,6 @@ import { Container } from './Container';
 import NotFound from './NotFound';
 import { Date_ } from './Date';
 
-import styles from './Post.css';
-
 export default function Post(sources: PageSources) {
 	const params$ = sources.Params;
 	return {
@@ -18,12 +16,12 @@ export default function Post(sources: PageSources) {
 			}
 
 			return Container([
-				h('h2', { attrs: { class: styles.title } }, post.title),
+				h('h2', { attrs: { class: 'text-center font-bold text-2xl my-4' } }, post.title),
 				h('div', {
-					attrs: { class: styles.post },
+					attrs: { class: 'mb-16 post' },
 					props: { innerHTML: post.content },
 				}),
-				h('div', { attrs: { class: styles.dates } }, [
+				h('div', { attrs: { class: 'opacity-50' } }, [
 					h('p', ['Created at: ', Date_({ timestamp: post.created_at })]),
 					h('p', ['Last updated at: ', Date_({ timestamp: post.updated_at })]),
 				]),

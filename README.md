@@ -24,3 +24,5 @@ routing
 
 prepack first article fully, all others first paragraph ?
 code split everything else ?
+
+NB: disable css validation in editors in when using tailwind because of @apply, not sure how to handle this yet

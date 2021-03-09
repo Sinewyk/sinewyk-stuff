@@ -3,7 +3,10 @@ import { Sources } from '../src/interfaces';
 import { Container } from './Container';
 import { back } from '../src/back';
 
-import styles from './Header.css';
+const styles: any = {
+	avatar: 'avatar relative -top-12 -mb-12 h-24 w-24 bg-cover mx-auto rounded-full shadow-lg',
+	navigationLinks: 'mr-4 mt-4',
+};
 
 const reflectacles = 'These are "Reflectacles Ghost" on my face if you are curious';
 
@@ -13,7 +16,7 @@ export default function Header(sources: Sources) {
 		DOM: history$.map(({ pathname }) =>
 			pathname === '/'
 				? h('header', [
-						h('div', { attrs: { class: styles.headerIndex } }),
+						h('div', { attrs: { class: 'header_photo bg-cover bg-bottom' } }),
 						h('div', {
 							attrs: {
 								class: styles.avatar,
@@ -23,13 +26,13 @@ export default function Header(sources: Sources) {
 						h(
 							'div',
 							{
-								attrs: { class: `${styles.sub}` },
+								attrs: { class: 'px-4 mx-auto sm:max-w-screen-sm text-center' },
 							},
-							h('p', { attrs: { class: styles.name } }, `Serge 'Sinewyk' Havas`),
+							h('p', { attrs: { class: 'font-bold text-xl my-4' } }, `Serge 'Sinewyk' Havas`),
 						),
 				  ])
 				: h('header', [
-						h('div', { attrs: { class: styles.header } }),
+						h('div', { attrs: { class: 'header_gradient' } }),
 						h('div', {
 							attrs: { class: styles.avatar },
 							title: reflectacles,
@@ -45,7 +48,6 @@ export default function Header(sources: Sources) {
 								},
 								'Back',
 							),
-							' ',
 							h('a', { attrs: { class: styles.navigationLinks, href: '/' } }, 'Home'),
 						]),
 				  ]),

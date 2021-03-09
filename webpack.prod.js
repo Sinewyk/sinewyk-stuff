@@ -4,6 +4,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageminPlugin = require('imagemin-webpack');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const purgecss = require('@fullhuman/postcss-purgecss');
 
 module.exports = {
 	...commonConf,
@@ -36,10 +37,6 @@ module.exports = {
 						options: {
 							sourceMap: true,
 							importLoaders: 1,
-							modules: {
-								// When testing, keep css name so that we can ... test ?
-								localIdentName: process.env.TESTING ? '[path][name]__[local]' : '[hash:base64]',
-							},
 						},
 					},
 					{
@@ -47,7 +44,21 @@ module.exports = {
 						options: {
 							postcssOptions: {
 								plugins: [
+									'tailwindcss',
 									'autoprefixer',
+									purgecss({
+										content: [
+											'./components/**/*.ts',
+											'./pages/**/*.ts',
+											'./src/**/*.ts',
+											'./public/index.ejs',
+										],
+										safelist: ['blockquote'],
+										keyframes: true,
+										variables: true,
+										fontFace: true,
+										defaultExtractor: (content) => content.match(/[\.\:A-Za-z0-9_-]+/g) || [],
+									}),
 									[
 										'cssnano',
 										{
