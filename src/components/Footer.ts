@@ -1,6 +1,6 @@
 import { h } from '@cycle/dom';
 import xs from 'xstream';
-import { Sources } from '../src/interfaces';
+import { Sources } from 'interfaces';
 import { Container } from './Container';
 import { Date_ } from './Date';
 

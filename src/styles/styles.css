@@ -15,13 +15,13 @@ html {
 }
 
 .avatar {
-	background-image: url('../public/reflect_cropped.jpg');
+	background-image: url('images/reflect_cropped.jpg');
 }
 
 .header_photo {
 	height: calc(100vh - 120px);
 	max-height: 400px;
-	background-image: url('../public/header_photo.jpg');
+	background-image: url('images/header_photo.jpg');
 }
 
 .post p {

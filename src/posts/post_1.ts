@@ -1,4 +1,4 @@
-import { Post } from '../src/interfaces';
+import { Post } from 'interfaces';
 import { default as content, _updated_at, _created_at } from './post_1_content.md';
 
 const post: Post = {

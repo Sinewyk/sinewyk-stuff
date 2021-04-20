@@ -1,15 +1,15 @@
 import { h } from '@cycle/dom';
 import { Location } from 'history';
 import xs from 'xstream';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import NotFound from '../components/NotFound';
+import Footer from 'components/Footer';
+import Header from 'components/Header';
+import NotFound from 'components/NotFound';
 import { extractSinks } from 'cyclejs-utils';
-import { Sources, Route } from './interfaces';
-import { route } from './routing';
-import List_Posts from '../pages/List_Posts';
-import Post from '../components/Post';
-import Home from '../pages/Home';
+import { Sources, Route } from 'interfaces';
+import { route } from 'routing';
+import List_Posts from 'pages/List_Posts';
+import Post from 'components/Post';
+import Home from 'pages/Home';
 
 const routes: Route[] = [
 	{ path: '/', value: Home },

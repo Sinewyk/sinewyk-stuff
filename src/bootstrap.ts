@@ -42,7 +42,7 @@ if (process.env.NODE_ENV === 'production') {
 	}, 0);
 
 	if ((module as any).hot) {
-		(module as any).hot.accept('../src/app', () => {
+		(module as any).hot.accept('app', () => {
 			rerun(app);
 		});
 	}

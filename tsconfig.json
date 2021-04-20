@@ -1,5 +1,6 @@
 {
 	"compilerOptions": {
+		"baseUrl": "./src",
 		"noEmit": true, // leave it to babel
 
 		"strict": true, // if we are going types, be strict

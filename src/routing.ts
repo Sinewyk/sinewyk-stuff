@@ -1,7 +1,7 @@
 import * as pathToRegexp from 'path-to-regexp';
 import xs from 'xstream';
 import concat from 'xstream/extra/concat';
-import { Sources, Route, WrappedComponent } from '../src/interfaces';
+import { Sources, Route, WrappedComponent } from 'interfaces';
 /**
  * Stole most of this from react-router matchPath
  */

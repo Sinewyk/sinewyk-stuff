@@ -1,7 +1,7 @@
 import { h } from '@cycle/dom';
-import { Sources } from '../src/interfaces';
-import { Container } from '../components/Container';
-import { Paragraph } from '../components/Paragraph';
+import { Sources } from 'interfaces';
+import { Container } from 'components/Container';
+import { Paragraph } from 'components/Paragraph';
 
 export default function Home(sources: Sources) {
 	return {

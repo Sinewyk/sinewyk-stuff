@@ -1,7 +1,7 @@
 import { h } from '@cycle/dom';
-import { Sources } from '../src/interfaces';
+import { Sources } from 'interfaces';
 import { Container } from './Container';
-import { back } from '../src/back';
+import { back } from 'back';
 
 const styles: any = {
 	avatar: 'avatar relative -top-12 -mb-12 h-24 w-24 bg-cover mx-auto rounded-full shadow-lg',

@@ -19,7 +19,7 @@ module.exports = {
 	},
 	plugins: [
 		new MyCleanPlugin(),
-		new FaviconsWebpackPlugin('./public/reflect_cropped.jpg'),
+		new FaviconsWebpackPlugin('./src/images/reflect_cropped.jpg'),
 		new HtmlWebpackPlugin({
 			title: "Sinewyk's Stuff",
 			author: "Serge 'Sinewyk' Havas",
@@ -72,6 +72,7 @@ module.exports = {
 	},
 	resolve: {
 		extensions: ['.ts', '.js', '.json'],
+		modules: ['src', 'node_modules'],
 	},
 	output: {
 		filename: '[name].bundle.js',

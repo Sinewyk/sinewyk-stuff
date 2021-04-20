@@ -1,9 +1,9 @@
 import { h } from '@cycle/dom';
-import { PageSources } from '../src/interfaces';
-import { Container } from '../components/Container';
-import { Paragraph } from '../components/Paragraph';
-import { Date_ } from '../components/Date';
-import posts from '../posts';
+import { PageSources } from 'interfaces';
+import { Container } from 'components/Container';
+import { Paragraph } from 'components/Paragraph';
+import { Date_ } from 'components/Date';
+import posts from 'posts';
 
 export default function List_Posts(sources: PageSources) {
 	const hasPosts = posts.length !== 0;

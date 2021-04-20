@@ -1,4 +1,4 @@
-import { Post } from '../src/interfaces';
+import { Post } from 'interfaces';
 import post_1 from './post_1';
 
 const posts: Post[] = [post_1];

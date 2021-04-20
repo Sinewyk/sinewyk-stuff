@@ -1,6 +1,6 @@
 import { h } from '@cycle/dom';
-import { PageSources } from '../src/interfaces';
-import posts from '../posts';
+import { PageSources } from 'interfaces';
+import posts from 'posts';
 import { Container } from './Container';
 import NotFound from './NotFound';
 import { Date_ } from './Date';
