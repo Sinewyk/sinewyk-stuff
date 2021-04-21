@@ -64,7 +64,7 @@
     "cyclejs-utils": "^4.0.2",
     "modern-normalize": "^1.0.0",
     "normalize.css": "^8.0.0",
-    "path-to-regexp": "^3.0.0",
+    "path-to-regexp": "^6.0.0",
     "process": "^0.11.10",
     "ramda": "^0.26.0",
     "snabbdom": "^0.7.3",
