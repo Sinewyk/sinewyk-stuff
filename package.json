@@ -77,6 +77,9 @@
     "trailingComma": "all",
     "printWidth": 100
   },
+  "engines": {
+    "node": ">=16.8.0"
+  },
   "browserslist": {
     "production": [
       "> 1%"

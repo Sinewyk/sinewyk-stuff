@@ -8,7 +8,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 class MyCleanPlugin {
 	apply(compiler) {
 		compiler.hooks.compilation.tap('Clean', (compilation) => {
-			fs.rmdirSync(compilation.options.output.path, { recursive: true });
+			fs.rmSync(compilation.options.output.path, { recursive: true, force: true });
 		});
 	}
 }
