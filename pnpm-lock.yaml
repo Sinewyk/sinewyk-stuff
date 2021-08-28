@@ -39,7 +39,7 @@ specifiers:
   normalize.css: ^8.0.0
   path-to-regexp: ^3.0.0
   postcss: ^8.2.7
-  postcss-loader: ^5.1.0
+  postcss-loader: ^6.0.0
   prettier: ^2.2.1
   process: ^0.11.10
   serve: ^12.0.0
@@ -98,7 +98,7 @@ devDependencies:
   markdown-loader: 6.0.0
   mini-css-extract-plugin: 1.6.2_webpack@5.51.1
   postcss: 8.3.6
-  postcss-loader: 5.3.0_postcss@8.3.6+webpack@5.51.1
+  postcss-loader: 6.1.1_postcss@8.3.6+webpack@5.51.1
   prettier: 2.3.2
   serve: 12.0.0
   start-server-and-test: 1.13.1
@@ -6880,9 +6880,9 @@ packages:
       yaml: 1.10.2
     dev: true
 
-  /postcss-loader/5.3.0_postcss@8.3.6+webpack@5.51.1:
-    resolution: {integrity: sha512-/+Z1RAmssdiSLgIZwnJHwBMnlABPgF7giYzTN2NOfr9D21IJZ4mQC1R2miwp80zno9M4zMD/umGI8cR+2EL5zw==}
-    engines: {node: '>= 10.13.0'}
+  /postcss-loader/6.1.1_postcss@8.3.6+webpack@5.51.1:
+    resolution: {integrity: sha512-lBmJMvRh1D40dqpWKr9Rpygwxn8M74U9uaCSeYGNKLGInbk9mXBt1ultHf2dH9Ghk6Ue4UXlXWwGMH9QdUJ5ug==}
+    engines: {node: '>= 12.13.0'}
     peerDependencies:
       postcss: ^7.0.0 || ^8.0.1
       webpack: ^5.0.0
