@@ -45,7 +45,7 @@ specifiers:
   serve: ^12.0.0
   snabbdom: ^0.7.3
   start-server-and-test: ^1.12.0
-  style-loader: ^2.0.0
+  style-loader: ^3.0.0
   tailwindcss: ^2.0.3
   typescript: ^4.2.3
   webpack: ^5.24.4
@@ -102,7 +102,7 @@ devDependencies:
   prettier: 2.3.2
   serve: 12.0.0
   start-server-and-test: 1.13.1
-  style-loader: 2.0.0_webpack@5.51.1
+  style-loader: 3.2.1_webpack@5.51.1
   tailwindcss: 2.2.8_3ae63246f7b6ebdbe8521b4b745e51c3
   typescript: 4.4.2
   webpack: 5.51.1_webpack-cli@4.8.0
@@ -8330,14 +8330,12 @@ packages:
       escape-string-regexp: 1.0.5
     dev: true
 
-  /style-loader/2.0.0_webpack@5.51.1:
-    resolution: {integrity: sha512-Z0gYUJmzZ6ZdRUqpg1r8GsaFKypE+3xAzuFeMuoHgjc9KZv3wMyCRjQIWEbhoFSq7+7yoHXySDJyyWQaPajeiQ==}
-    engines: {node: '>= 10.13.0'}
+  /style-loader/3.2.1_webpack@5.51.1:
+    resolution: {integrity: sha512-1k9ZosJCRFaRbY6hH49JFlRB0fVSbmnyq1iTPjNxUmGVjBNEmwrrHPenhlp+Lgo51BojHSf6pl2FcqYaN3PfVg==}
+    engines: {node: '>= 12.13.0'}
     peerDependencies:
-      webpack: ^4.0.0 || ^5.0.0
+      webpack: ^5.0.0
     dependencies:
-      loader-utils: 2.0.0
-      schema-utils: 3.1.1
       webpack: 5.51.1_webpack-cli@4.8.0
     dev: true
 
