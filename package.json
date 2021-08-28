@@ -29,7 +29,7 @@
     "compression-webpack-plugin": "^8.0.1",
     "copy-webpack-plugin": "^7.0.0",
     "cross-env": "^7.0.3",
-    "css-loader": "^5.1.1",
+    "css-loader": "^6.0.0",
     "cssnano": "^4.1.7",
     "cycle-restart": "^0.2.2",
     "cypress": "^3.4.0",
