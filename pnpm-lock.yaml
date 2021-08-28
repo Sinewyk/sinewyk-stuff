@@ -34,7 +34,7 @@ specifiers:
   imagemin-svgo: ^9.0.0
   lodash: ^4.17.21
   markdown-loader: ^6.0.0
-  mini-css-extract-plugin: ^1.3.9
+  mini-css-extract-plugin: ^2.0.0
   modern-normalize: ^1.0.0
   normalize.css: ^8.0.0
   path-to-regexp: ^3.0.0
@@ -96,7 +96,7 @@ devDependencies:
   imagemin-optipng: 8.0.0
   imagemin-svgo: 9.0.0
   markdown-loader: 6.0.0
-  mini-css-extract-plugin: 1.6.2_webpack@5.51.1
+  mini-css-extract-plugin: 2.2.0_webpack@5.51.1
   postcss: 8.3.6
   postcss-loader: 5.3.0_postcss@8.3.6+webpack@5.51.1
   prettier: 2.3.2
@@ -6073,16 +6073,14 @@ packages:
       dom-walk: 0.1.2
     dev: true
 
-  /mini-css-extract-plugin/1.6.2_webpack@5.51.1:
-    resolution: {integrity: sha512-WhDvO3SjGm40oV5y26GjMJYjd2UMqrLAGKy5YS2/3QKJy2F7jgynuHTir/tgUUOiNQu5saXHdc8reo7YuhhT4Q==}
-    engines: {node: '>= 10.13.0'}
+  /mini-css-extract-plugin/2.2.0_webpack@5.51.1:
+    resolution: {integrity: sha512-91HeVHbq7PUJ4TwOuMTlFWfVWrLqf3SF0PlEDPV+wtgsfxrMebN9LLzflyQqdKLp4/H3PexRB1WLKsCqpWKkxQ==}
+    engines: {node: '>= 12.13.0'}
     peerDependencies:
-      webpack: ^4.4.0 || ^5.0.0
+      webpack: ^5.0.0
     dependencies:
-      loader-utils: 2.0.0
       schema-utils: 3.1.1
       webpack: 5.51.1_webpack-cli@4.8.0
-      webpack-sources: 1.4.3
     dev: true
 
   /minimalistic-assert/1.0.1:
@@ -8058,10 +8056,6 @@ packages:
     resolution: {integrity: sha1-QaYsAkvXVcTFcwbiDuySYg2uXZc=}
     dev: true
 
-  /source-list-map/2.0.1:
-    resolution: {integrity: sha512-qnQ7gVMxGNxsiL4lEuJwe/To8UnK7fAnmbGEEH8RpLouuKbeEm0lhbQVFIrNSuB+G7tVrAlVsZgETT5nljf+Iw==}
-    dev: true
-
   /source-map-js/0.6.2:
     resolution: {integrity: sha512-/3GptzWzu0+0MBQFrDKzw/DvvMTUORvgY6k6jd/VS6iCR4RDTKWH6v6WPwQoUO8667uQEf9Oe38DxAYWY5F/Ug==}
     engines: {node: '>=0.10.0'}
@@ -9093,13 +9087,6 @@ packages:
     dependencies:
       clone-deep: 4.0.1
       wildcard: 2.0.0
-    dev: true
-
-  /webpack-sources/1.4.3:
-    resolution: {integrity: sha512-lgTS3Xhv1lCOKo7SA5TjKXMjpSM4sBjNV5+q2bqesbSPs5FjGmU6jjtBSkX9b4qW87vDIsCIlUPOEhbZrMdjeQ==}
-    dependencies:
-      source-list-map: 2.0.1
-      source-map: 0.6.1
     dev: true
 
   /webpack-sources/3.2.0:
