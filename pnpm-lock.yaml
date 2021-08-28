@@ -16,7 +16,7 @@ specifiers:
   babel-loader: ^8.2.2
   babel-plugin-transform-inline-environment-variables: ^0.4.3
   compression-webpack-plugin: ^8.0.1
-  copy-webpack-plugin: ^7.0.0
+  copy-webpack-plugin: ^9.0.0
   cross-env: ^7.0.3
   css-loader: ^5.1.1
   cssnano: ^4.1.7
@@ -80,7 +80,7 @@ devDependencies:
   babel-loader: 8.2.2_080b9887a086cbf3e61f158e7c92b566
   babel-plugin-transform-inline-environment-variables: 0.4.3
   compression-webpack-plugin: 8.0.1_webpack@5.51.1
-  copy-webpack-plugin: 7.0.0_webpack@5.51.1
+  copy-webpack-plugin: 9.0.1_webpack@5.51.1
   cross-env: 7.0.3
   css-loader: 5.2.7_webpack@5.51.1
   cssnano: 4.1.11
@@ -3058,20 +3058,19 @@ packages:
     engines: {node: '>= 0.6'}
     dev: true
 
-  /copy-webpack-plugin/7.0.0_webpack@5.51.1:
-    resolution: {integrity: sha512-SLjQNa5iE3BoCP76ESU9qYo9ZkEWtXoZxDurHoqPchAFRblJ9g96xTeC560UXBMre1Nx6ixIIUfiY3VcjpJw3g==}
-    engines: {node: '>= 10.13.0'}
+  /copy-webpack-plugin/9.0.1_webpack@5.51.1:
+    resolution: {integrity: sha512-14gHKKdYIxF84jCEgPgYXCPpldbwpxxLbCmA7LReY7gvbaT555DgeBWBgBZM116tv/fO6RRJrsivBqRyRlukhw==}
+    engines: {node: '>= 12.13.0'}
     peerDependencies:
       webpack: ^5.1.0
     dependencies:
       fast-glob: 3.2.7
-      glob-parent: 5.1.2
+      glob-parent: 6.0.1
       globby: 11.0.4
-      loader-utils: 2.0.0
       normalize-path: 3.0.0
       p-limit: 3.1.0
       schema-utils: 3.1.1
-      serialize-javascript: 5.0.1
+      serialize-javascript: 6.0.0
       webpack: 5.51.1_webpack-cli@4.8.0
     dev: true
 
