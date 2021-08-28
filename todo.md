@@ -1,4 +1,3 @@
-remove purge tailwind conf in prod
-deal with url/file loader => assets management in webpack 5 conf
-deal with the minification, try to do it "inline", don't copy both, just the end minified,
-deal with favicon at the root of the file, post copy task or something ?
+remove purge tailwind conf in prod, in general deal with tailwind jit from top to bottom
+check asset management
+change cypress to https://playwright.dev/

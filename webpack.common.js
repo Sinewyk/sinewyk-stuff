@@ -19,7 +19,21 @@ module.exports = {
 	},
 	plugins: [
 		new MyCleanPlugin(),
-		new FaviconsWebpackPlugin('./src/images/reflect_cropped.jpg'),
+		new FaviconsWebpackPlugin({
+			logo: './src/images/reflect_cropped.jpg',
+			prefix: '',
+			favicons: {
+				icons: {
+					android: false,
+					appleIcon: false,
+					appleStartup: false,
+					coast: false,
+					windows: false,
+					yandex: false,
+					firefox: false,
+				},
+			},
+		}),
 		new HtmlWebpackPlugin({
 			title: "Sinewyk's Stuff",
 			author: "Serge 'Sinewyk' Havas",
@@ -42,10 +56,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
-				loader: 'url-loader',
-				options: {
-					limit: 10000,
-				},
+				type: 'asset',
 			},
 			{
 				test: /\.ts?$/,

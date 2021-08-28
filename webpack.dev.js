@@ -36,11 +36,15 @@ module.exports = {
 		],
 	},
 	devServer: {
-		contentBase: './dist',
+		static: {
+			directory: './dist',
+		},
 		port: 8000,
 		historyApiFallback: true,
-		overlay: {
-			errors: true,
+		client: {
+			overlay: {
+				errors: true,
+			},
 		},
 	},
 };

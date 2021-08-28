@@ -2,7 +2,7 @@ const commonConf = require('./webpack.common');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const ImageminPlugin = require('imagemin-webpack');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const purgecss = require('@fullhuman/postcss-purgecss');
 
@@ -83,16 +83,16 @@ module.exports = {
 	},
 	plugins: [
 		...commonConf.plugins,
-		new ImageminPlugin({
-			test: /\.(jpe?g|png|gif)$/i, // default /\.(jpe?g|png|gif|svg)$/i STOPGAP for pdf.svg not being copied :x
-			imageminOptions: {
+		new ImageMinimizerPlugin({
+			minimizerOptions: {
+				// Lossless optimization with custom option
+				// Feel free to experiment with options for better result for you
 				plugins: [
-					[
-						'jpegtran',
-						{
-							progressive: true,
-						},
-					],
+					['gifsicle', { interlaced: true }],
+					['jpegtran', { progressive: true }],
+					['optipng', { optimizationLevel: 5 }],
+					// Svgo configuration here https://github.com/svg/svgo#configuration
+					'svgo',
 				],
 			},
 		}),

@@ -10,6 +10,6 @@ describe('Routing', () => {
 
 	it('should handle 404', () => {
 		cy.visit('/unknown');
-		cy.get('.components-Container__container').contains(`Route not found :'(`);
+		cy.get('.mx-auto').contains(`Route not found :'(`);
 	});
 });

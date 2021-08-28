@@ -1,15 +1,15 @@
 const fs = require('fs');
 const { exec } = require('child_process');
-const R = require('ramda');
+const _ = require('lodash/fp');
 
-const split_new_line = R.split('\n');
-const filter_empty_string = R.filter((x) => x !== '');
+const split_new_line = _.split('\n');
+const filter_empty_string = _.filter((x) => x !== '');
 const parse_int_10 = (int) => parseInt(int, 10);
 const multiply_by_1000 = (x) => x * 1000;
 
-const get_first_js_timestamp = R.pipe(R.head, parse_int_10, multiply_by_1000);
-const get_last_js_timestamp = R.pipe(R.last, parse_int_10, multiply_by_1000);
-const get_timestamp_array = R.pipe(split_new_line, filter_empty_string);
+const get_first_js_timestamp = _.pipe(_.head, parse_int_10, multiply_by_1000);
+const get_last_js_timestamp = _.pipe(_.last, parse_int_10, multiply_by_1000);
+const get_timestamp_array = _.pipe(split_new_line, filter_empty_string);
 
 module.exports = function (code) {
 	const callback = this.async();
