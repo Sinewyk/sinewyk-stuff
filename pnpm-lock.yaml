@@ -43,7 +43,7 @@ specifiers:
   prettier: ^2.3.2
   process: ^0.11.10
   serve: ^12.0.0
-  snabbdom: ^0.7.4
+  snabbdom: ^3.0.0
   start-server-and-test: ^1.13.1
   style-loader: ^3.2.1
   tailwindcss: ^2.2.8
@@ -65,7 +65,7 @@ dependencies:
   normalize.css: 8.0.1
   path-to-regexp: 3.2.0
   process: 0.11.10
-  snabbdom: 0.7.4
+  snabbdom: 3.0.3
   xstream: 11.14.0
 
 devDependencies:
@@ -7834,6 +7834,11 @@ packages:
 
   /snabbdom/0.7.4:
     resolution: {integrity: sha512-nnN+7uZ2NTIiu7EPMNwSDhmrYXqwlfCP/j72RdzvDPujXyvQxOW7Jl9yuLayzxMHDNWQR7FM6Pcn4wnDpKRe6Q==}
+    dev: false
+
+  /snabbdom/3.0.3:
+    resolution: {integrity: sha512-+HEwNccHj1lTKx3I7vKm7La+FhhcJFJloPkmPE0pwYQFq6aZSx2SCJrUKotD/+L8kA+EHcXRmBe5Yd2LX1WlQQ==}
+    engines: {node: '>=8.3.0'}
     dev: false
 
   /sockjs/0.3.21:
