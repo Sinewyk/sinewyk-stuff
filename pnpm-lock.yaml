@@ -5,7 +5,7 @@ specifiers:
   '@babel/plugin-syntax-dynamic-import': ^7.8.3
   '@babel/preset-env': ^7.15.0
   '@babel/preset-typescript': ^7.15.0
-  '@cycle/dom': ^22.8.0
+  '@cycle/dom': ^23.0.0
   '@cycle/history': ^7.4.0
   '@cycle/run': ^5.5.0
   '@fullhuman/postcss-purgecss': ^4.0.3
@@ -55,7 +55,7 @@ specifiers:
   xstream: ^11.14.0
 
 dependencies:
-  '@cycle/dom': 22.8.0
+  '@cycle/dom': 23.0.0
   '@cycle/history': 7.4.0
   '@cycle/run': 5.5.0
   assert: 2.0.0
@@ -1252,13 +1252,13 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@cycle/dom/22.8.0:
-    resolution: {integrity: sha512-YnB4zUGOXVdPFXaVzYEUHXNqJlz1190Qfj1UpEBSiiJMPw+jskrNPrlhzqpE1MVjtpNlBJVoe+Vq73d2MnP3Bw==}
+  /@cycle/dom/23.0.0:
+    resolution: {integrity: sha512-cbwEJALcjvn8f7i7PjG9Z48yX8un44QXhu/0g3oe6vbAahO59maxL/QwnWACO8Y38FjIurhAOpqEeJzfaYKyjw==}
     engines: {node: '>=0.10.0'}
     dependencies:
       '@cycle/run': 5.5.0
-      snabbdom: 0.7.4
-      snabbdom-selector: 4.2.0_snabbdom@0.7.4
+      snabbdom: 3.0.3
+      snabbdom-selector: 5.0.0_snabbdom@3.0.3
       xstream: 11.14.0
     dev: false
 
@@ -7823,17 +7823,22 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /snabbdom-selector/4.2.0_snabbdom@0.7.4:
-    resolution: {integrity: sha512-hNIg1xDMxssUeMC/4r3OGxXhm8pbyJ0KIG0pXrA3J5ZQK+FkPa+WA9DYw4ROMLq5/LrfurMNMvy3IMm+0CzcnA==}
+  /snabbdom-selector/5.0.0_snabbdom@3.0.3:
+    resolution: {integrity: sha512-bJgpomacLM3jVhghsFxLcws8B6k+GVcnB/Af3avannj/zavIM1vLagvQHTFXzRVkf6nfxYaf/q58gekClDJoYA==}
     peerDependencies:
       snabbdom: '*'
     dependencies:
-      snabbdom: 0.7.4
+      snabbdom: 3.0.3
       tree-selector: 2.1.1
     dev: false
 
   /snabbdom/0.7.4:
     resolution: {integrity: sha512-nnN+7uZ2NTIiu7EPMNwSDhmrYXqwlfCP/j72RdzvDPujXyvQxOW7Jl9yuLayzxMHDNWQR7FM6Pcn4wnDpKRe6Q==}
+    dev: false
+
+  /snabbdom/3.0.3:
+    resolution: {integrity: sha512-+HEwNccHj1lTKx3I7vKm7La+FhhcJFJloPkmPE0pwYQFq6aZSx2SCJrUKotD/+L8kA+EHcXRmBe5Yd2LX1WlQQ==}
+    engines: {node: '>=8.3.0'}
     dev: false
 
   /sockjs/0.3.21:
