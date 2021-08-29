@@ -68,7 +68,7 @@
     "normalize.css": "^8.0.1",
     "path-to-regexp": "^3.2.0",
     "process": "^0.11.10",
-    "snabbdom": "^0.7.4",
+    "snabbdom": "^3.0.0",
     "xstream": "^11.14.0"
   },
   "prettier": {
