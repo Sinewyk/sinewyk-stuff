@@ -37,7 +37,7 @@ specifiers:
   mini-css-extract-plugin: ^2.2.0
   modern-normalize: ^1.1.0
   normalize.css: ^8.0.1
-  path-to-regexp: ^3.2.0
+  path-to-regexp: ^6.0.0
   postcss: ^8.3.6
   postcss-loader: ^6.1.1
   prettier: ^2.3.2
@@ -63,7 +63,7 @@ dependencies:
   lodash: 4.17.21
   modern-normalize: 1.1.0
   normalize.css: 8.0.1
-  path-to-regexp: 3.2.0
+  path-to-regexp: 6.2.0
   process: 0.11.10
   snabbdom: 0.7.4
   xstream: 11.14.0
@@ -6505,8 +6505,8 @@ packages:
     resolution: {integrity: sha512-gu9bD6Ta5bwGrrU8muHzVOBFFREpp2iRkVfhBJahwJ6p6Xw20SjT0MxLnwkjOibQmGSYhiUnf2FLe7k+jcFmGQ==}
     dev: true
 
-  /path-to-regexp/3.2.0:
-    resolution: {integrity: sha512-jczvQbCUS7XmS7o+y1aEO9OBVFeZBQ1MDSEqmO7xSoPgOPoowY/SxLpZ6Vh97/8qHZOteiCKb7gkG9gA2ZUxJA==}
+  /path-to-regexp/6.2.0:
+    resolution: {integrity: sha512-f66KywYG6+43afgE/8j/GoiNyygk/bnoCbps++3ErRKsIYkGGupyv07R2Ok5m9i67Iqc+T2g1eAUGUPzWhYTyg==}
     dev: false
 
   /path-type/1.1.0:
