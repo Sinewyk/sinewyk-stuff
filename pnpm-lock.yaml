@@ -15,7 +15,7 @@ specifiers:
   autoprefixer: ^10.3.3
   babel-loader: ^8.2.2
   babel-plugin-transform-inline-environment-variables: ^0.4.3
-  compression-webpack-plugin: ^8.0.1
+  compression-webpack-plugin: ^9.0.0
   copy-webpack-plugin: ^9.0.1
   cross-env: ^7.0.3
   css-loader: ^6.2.0
@@ -79,7 +79,7 @@ devDependencies:
   autoprefixer: 10.3.3_postcss@8.3.6
   babel-loader: 8.2.2_080b9887a086cbf3e61f158e7c92b566
   babel-plugin-transform-inline-environment-variables: 0.4.3
-  compression-webpack-plugin: 8.0.1_webpack@5.51.1
+  compression-webpack-plugin: 9.0.0_webpack@5.51.1
   copy-webpack-plugin: 9.0.1_webpack@5.51.1
   cross-env: 7.0.3
   css-loader: 6.2.0_webpack@5.51.1
@@ -2917,8 +2917,8 @@ packages:
       mime-db: 1.49.0
     dev: true
 
-  /compression-webpack-plugin/8.0.1_webpack@5.51.1:
-    resolution: {integrity: sha512-VWDXcOgEafQDMFXEnoia0VBXJ+RMw81pmqe/EBiOIBnMfY8pG26eqwIS/ytGpzy1rozydltL0zL6KDH9XNWBxQ==}
+  /compression-webpack-plugin/9.0.0_webpack@5.51.1:
+    resolution: {integrity: sha512-V2KmQqaUkErPT+ZcUGHa8zWpIw1oTYaC7wjGewJm053GWAoY04GfU5B/NZ/JSz1eFp9MggMdLQpEHe1TJAQY1A==}
     engines: {node: '>= 12.13.0'}
     peerDependencies:
       webpack: ^5.1.0
