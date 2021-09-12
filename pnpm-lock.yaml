@@ -31,7 +31,7 @@ specifiers:
   imagemin-gifsicle: ^7.0.0
   imagemin-jpegtran: ^7.0.0
   imagemin-optipng: ^8.0.0
-  imagemin-svgo: ^9.0.0
+  imagemin-svgo: ^10.0.0
   lodash: ^4.17.21
   markdown-loader: ^6.0.0
   mini-css-extract-plugin: ^2.2.0
@@ -94,7 +94,7 @@ devDependencies:
   imagemin-gifsicle: 7.0.0
   imagemin-jpegtran: 7.0.0
   imagemin-optipng: 8.0.0
-  imagemin-svgo: 9.0.0
+  imagemin-svgo: 10.0.0
   markdown-loader: 6.0.0
   mini-css-extract-plugin: 2.2.0_webpack@5.51.1
   postcss: 8.3.6
@@ -4817,9 +4817,9 @@ packages:
       optipng-bin: 7.0.0
     dev: true
 
-  /imagemin-svgo/9.0.0:
-    resolution: {integrity: sha512-uNgXpKHd99C0WODkrJ8OO/3zW3qjgS4pW7hcuII0RcHN3tnKxDjJWcitdVC/TZyfIqSricU8WfrHn26bdSW62g==}
-    engines: {node: '>=10'}
+  /imagemin-svgo/10.0.0:
+    resolution: {integrity: sha512-nuikUDlf8u81V25ckHrWE8l7fECNx403EU3a3qrSO8H4ipBSEL3QlOgrBqZ1SJQ1lsIzJbBKwXvsrVGGO6Hj2g==}
+    engines: {node: '>=12.20'}
     dependencies:
       is-svg: 4.3.1
       svgo: 2.5.0
