@@ -4,8 +4,10 @@
 #project
 node_modules
 dist
+
 # to compare dist build when playing around with prod build optimizations
 dist_*
 
 #testing
+coverage
 cypress/videos

@@ -1,6 +1,18 @@
+#editor specific
+.vscode
+
+#project
 node_modules
-package.json
-package-lock.json
 dist
+
+# to compare dist build when playing around with prod build optimizations
 dist_*
+
+#testing
 coverage
+cypress/videos
+
+# specific to prettierignore
+# what is just overwritten by another tool
+package.json
+pnpm-lock.yaml
