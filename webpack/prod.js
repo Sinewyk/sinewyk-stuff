@@ -1,4 +1,3 @@
-const commonConf = require('./webpack.common');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -6,12 +5,10 @@ const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const purgecss = require('@fullhuman/postcss-purgecss');
 
-module.exports = {
-	...commonConf,
+module.exports = () => ({
 	mode: 'production',
 	devtool: 'source-map',
 	output: {
-		...commonConf.output,
 		filename: '[name].[contenthash].js',
 	},
 	profile: true,
@@ -25,7 +22,6 @@ module.exports = {
 	},
 	module: {
 		rules: [
-			...commonConf.module.rules,
 			{
 				test: /\.css$/,
 				use: [
@@ -82,7 +78,6 @@ module.exports = {
 		],
 	},
 	plugins: [
-		...commonConf.plugins,
 		new ImageMinimizerPlugin({
 			minimizerOptions: {
 				// Lossless optimization with custom option
@@ -111,4 +106,4 @@ module.exports = {
 		}),
 		new CompressionPlugin(),
 	],
-};
+});

@@ -9,12 +9,15 @@ import { Sources, Route } from 'interfaces';
 import { route } from 'routing';
 import List_Posts from 'pages/List_Posts';
 import Post from 'components/Post';
+import OneStuff from 'components/OneStuff';
 import Home from 'pages/Home';
 
 const routes: Route[] = [
 	{ path: '/', value: Home },
 	{ path: '/posts', value: List_Posts },
 	{ path: '/posts/:slug', value: Post },
+	// { path: '/stuff', value: List_Posts },
+	{ path: '/stuff/:slug', value: OneStuff },
 ];
 
 function Site(sources: Sources) {

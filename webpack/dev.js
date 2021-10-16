@@ -1,14 +1,9 @@
-const commonConf = require('./webpack.common');
-const webpack = require('webpack');
-
-module.exports = {
-	...commonConf,
+module.exports = ({ port = 8000 }) => ({
 	mode: 'development',
 	target: 'web', // default is browserlist (which will be for prod webpack conf)
 	devtool: 'eval',
 	module: {
 		rules: [
-			...commonConf.module.rules,
 			{
 				test: /\.css$/,
 				use: [
@@ -36,10 +31,7 @@ module.exports = {
 		],
 	},
 	devServer: {
-		static: {
-			directory: './dist',
-		},
-		port: 8000,
+		port,
 		historyApiFallback: true,
 		client: {
 			overlay: {
@@ -47,4 +39,4 @@ module.exports = {
 			},
 		},
 	},
-};
+});

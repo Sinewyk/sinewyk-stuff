@@ -9,8 +9,10 @@ export default function Home(sources: Sources) {
 			Container([
 				Paragraph('⚠️ In construction ⚠️'),
 				Paragraph('Welcome to my stuff'),
-				Paragraph('This is my playground ... and there is stuff to read too.'),
+				Paragraph('This is my playground ... and there is stuff to read too:'),
 				h('a', { attrs: { href: '/posts' } }, 'My posts'),
+				Paragraph('Here is my stuff (all my experiments/toolkit):'),
+				h('a', { attrs: { href: '/stuff/time' } }, 'My stuff'),
 				Paragraph(
 					`I'm primarly building this to play around with streams and just
           (reactive?) functional programming in general`,
