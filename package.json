@@ -35,7 +35,7 @@
     "cypress": "^3.8.3",
     "favicons": "^6.2.2",
     "favicons-webpack-plugin": "^5.0.2",
-    "html-loader": "^2.1.2",
+    "html-loader": "^3.0.0",
     "html-webpack-plugin": "^5.3.2",
     "image-minimizer-webpack-plugin": "^2.2.0",
     "imagemin-gifsicle": "^7.0.0",
