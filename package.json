@@ -59,7 +59,7 @@
   },
   "dependencies": {
     "@cycle/dom": "^22.8.0",
-    "@cycle/history": "^7.4.0",
+    "@cycle/history": "^9.0.0",
     "@cycle/run": "^5.5.0",
     "assert": "^2.0.0",
     "cyclejs-utils": "^4.0.2",
