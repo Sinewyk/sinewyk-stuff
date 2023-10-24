@@ -22,7 +22,7 @@
     "@babel/preset-typescript": "^7.15.0",
     "@fullhuman/postcss-purgecss": "^4.0.3",
     "@types/history": "^4.7.9",
-    "@types/node": "^16.7.5",
+    "@types/node": "^20.0.0",
     "autoprefixer": "^10.3.3",
     "babel-loader": "^8.2.2",
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
