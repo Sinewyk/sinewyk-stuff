@@ -24,7 +24,7 @@
     "@types/history": "^4.7.9",
     "@types/node": "^16.7.5",
     "autoprefixer": "^10.3.3",
-    "babel-loader": "^8.2.2",
+    "babel-loader": "^9.0.0",
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "compression-webpack-plugin": "^8.0.1",
     "copy-webpack-plugin": "^9.0.1",
